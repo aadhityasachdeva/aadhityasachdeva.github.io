@@ -11,11 +11,6 @@ const HeroSection = () => {
       
       <div className="container mx-auto px-4 py-20 text-center relative z-10">
         <div className="max-w-6xl mx-auto">
-          {/* Main Heading */}
-          <h1 className="text-5xl md:text-7xl font-bold font-poppins mb-8 animate-fade-in-up">
-            Connect. Create. <span className="text-primary">Earn.</span>
-          </h1>
-          
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto animate-fade-in-up">
             The peer-to-peer service marketplace designed exclusively for college students. 
             <span className="text-primary"> Your skills. Your campus. Your earnings.</span>
