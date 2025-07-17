@@ -11,47 +11,27 @@ const HeroSection = () => {
       
       <div className="container mx-auto px-4 py-20 text-center relative z-10">
         <div className="max-w-6xl mx-auto">
+          {/* Main Tagline */}
+          <h2 className="text-3xl md:text-5xl font-bold font-poppins mb-8 animate-fade-in-up">
+            <span className="text-foreground">Real Tasks. Real Skills. Real Earnings.</span>
+            <br />
+            <span className="text-primary">Just Askit.</span>
+          </h2>
+
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto animate-fade-in-up">
             The peer-to-peer service marketplace designed exclusively for college students. 
             <span className="text-primary"> Your skills. Your campus. Your earnings.</span>
           </p>
 
-          {/* Main Tagline */}
-          <div className="bg-card/80 backdrop-blur-md border border-border rounded-2xl p-8 mb-12 max-w-4xl mx-auto animate-fade-in-up">
-            <h2 className="text-3xl md:text-5xl font-bold font-poppins">
-              <span className="text-foreground">Real Tasks. Real Skills. Real Earnings.</span>
-              <br />
-              <span className="text-primary">Just Askit.</span>
-            </h2>
-          </div>
-
-          {/* Phone Mockup Placeholder */}
+          {/* App Screen Preview */}
           <div className="flex justify-center mb-12">
-            <div className="bg-card border border-border rounded-3xl p-8 max-w-sm mx-auto shadow-glow">
-              <div className="bg-dark-surface rounded-2xl aspect-[9/16] flex items-center justify-center">
-                <Smartphone className="w-16 h-16 text-primary" />
-                <span className="ml-4 text-muted-foreground">App Screen Preview</span>
-              </div>
+            <div className="max-w-lg mx-auto">
+              <img 
+                src="/lovable-uploads/fee3ac75-bef9-4fc6-98a9-39bfc5921164.png" 
+                alt="Askit app screens showing task listings and logo"
+                className="w-full h-auto animate-fade-in-up"
+              />
             </div>
-          </div>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in-up">
-            <Button 
-              size="lg" 
-              className="bg-primary hover:bg-primary/80 text-primary-foreground font-semibold px-8 py-4 text-lg group animate-glow-pulse"
-            >
-              Join as a Service Provider
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            
-            <Button 
-              variant="outline" 
-              size="lg"
-              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold px-8 py-4 text-lg"
-            >
-              Post Your First Task
-            </Button>
           </div>
 
           {/* Scroll indicator */}
