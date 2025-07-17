@@ -9,28 +9,39 @@ const HeroSection = () => {
       <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
       
-      <div className="container mx-auto px-4 py-20 text-center relative z-10">
-        <div className="max-w-6xl mx-auto">
+      <div className="container mx-auto px-4 py-20 relative z-10">
+        <div className="max-w-7xl mx-auto">
           {/* Main Tagline */}
-          <h2 className="text-3xl md:text-5xl font-bold font-poppins mb-8 animate-fade-in-up">
-            <span className="text-foreground">Real Tasks. Real Skills. Real Earnings.</span>
-            <br />
-            <span className="text-primary">Just Askit.</span>
-          </h2>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold font-poppins mb-8 animate-fade-in-up hover:scale-105 transition-transform duration-300">
+              <span className="text-foreground">Real Tasks. Real Skills. Real Earnings.</span>
+              <br />
+              <span className="text-primary bg-gradient-to-r from-primary to-electric-blue-glow bg-clip-text text-transparent">Just Askit.</span>
+            </h2>
+          </div>
 
-          <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto animate-fade-in-up">
-            The peer-to-peer service marketplace designed exclusively for college students. 
-            <span className="text-primary"> Your skills. Your campus. Your earnings.</span>
-          </p>
+          {/* Two-column layout */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left side - Text content */}
+            <div className="text-left lg:pr-8 animate-fade-in-up">
+              <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
+                The peer-to-peer service marketplace designed exclusively for college students. 
+                <span className="text-primary font-semibold"> Your skills. Your campus. Your earnings.</span>
+              </p>
+            </div>
 
-          {/* App Screen Preview */}
-          <div className="flex justify-center mb-12">
-            <div className="max-w-lg mx-auto">
-              <img 
-                src="/lovable-uploads/fee3ac75-bef9-4fc6-98a9-39bfc5921164.png" 
-                alt="Askit app screens showing task listings and logo"
-                className="w-full h-auto animate-fade-in-up"
-              />
+            {/* Right side - App Screen Preview */}
+            <div className="flex justify-center lg:justify-end">
+              <div className="max-w-lg mx-auto lg:mx-0 transform hover:scale-105 transition-transform duration-500 animate-fade-in-up">
+                <div className="relative group">
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-electric-blue-glow/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                  <img 
+                    src="/lovable-uploads/fee3ac75-bef9-4fc6-98a9-39bfc5921164.png" 
+                    alt="Askit app screens showing task listings and logo"
+                    className="relative w-full h-auto rounded-2xl shadow-2xl border border-primary/20"
+                  />
+                </div>
+              </div>
             </div>
           </div>
 

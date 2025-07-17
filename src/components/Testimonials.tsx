@@ -4,22 +4,22 @@ import { Quote } from 'lucide-react';
 const testimonials = [
   {
     text: "I made ₹1,000 just editing a video for someone via Askit!",
-    author: "Priya, DU Student",
+    author: "Priya, Delhi University",
     category: "Video Editing"
   },
   {
-    text: "I got a reliable gym buddy through Askit — only ₹500 a week!",
-    author: "Rahul, IIT Delhi",
+    text: "I found someone to help me with my workouts on Askit!",
+    author: "Anuj, NMIMS University",
     category: "Fitness Partner"
   },
   {
     text: "I met my college deadlines with help for research & writing on Askit.",
-    author: "Sneha, Miranda House",
+    author: "Reyansh, St. Xavier's",
     category: "Academic Help"
   },
   {
     text: "I borrowed a Bluetooth speaker last minute and saved our house party!",
-    author: "Arjun, SRCC",
+    author: "Sneha, Amity University",
     category: "Equipment Rental"
   }
 ];
@@ -73,7 +73,7 @@ const Testimonials = () => {
                 <div
                   key={index}
                   ref={(el) => testimonialRefs.current[index] = el}
-                  className={`group p-8 bg-card border border-border rounded-2xl hover:border-primary/50 hover:shadow-glow transition-all duration-700 transform ${
+                  className={`group p-8 bg-card border border-border rounded-2xl hover:border-primary/50 hover:shadow-glow transition-all duration-700 transform hover:scale-105 hover:-translate-y-2 ${
                     isVisible 
                       ? 'opacity-100 translate-y-0' 
                       : 'opacity-0 translate-y-10'

@@ -14,8 +14,8 @@ const Index = () => {
       <Navigation />
       <HeroSection />
       <HowItWorks />
-      <FAQ />
       <WhyAskit />
+      <FAQ />
       <Categories />
       <BetaTesting />
       <Testimonials />

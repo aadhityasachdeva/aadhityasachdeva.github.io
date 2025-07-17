@@ -25,9 +25,16 @@ const Navigation = () => {
     }`}>
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="text-2xl font-bold font-poppins">
-            <span className="text-foreground">Askit</span>
-            <span className="text-primary"> India</span>
+          <div className="flex items-center space-x-3">
+            <img 
+              src="/lovable-uploads/532310be-40cb-43df-93cd-8ed39d0d5a3c.png" 
+              alt="Askit India Logo" 
+              className="h-8 w-auto"
+            />
+            <div className="text-2xl font-bold font-poppins">
+              <span className="text-foreground">Askit</span>
+              <span className="text-primary"> India</span>
+            </div>
           </div>
           
           <div className="hidden md:flex items-center space-x-8">

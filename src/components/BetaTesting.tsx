@@ -16,18 +16,6 @@ const BetaTesting = () => {
             </p>
           </div>
 
-          {/* Placeholder for testimonial quote or app render */}
-          <div className="mb-12">
-            <div className="bg-card border border-border rounded-2xl p-8 max-w-2xl mx-auto">
-              <div className="text-muted-foreground">
-                <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Rocket className="w-8 h-8 text-primary" />
-                </div>
-                <p className="text-lg italic">Testimonial Quote Overlay</p>
-                <p className="text-sm mt-2">or App Render Placeholder</p>
-              </div>
-            </div>
-          </div>
 
           <Button 
             size="lg" 
@@ -39,7 +27,7 @@ const BetaTesting = () => {
           </Button>
 
           <p className="text-sm text-muted-foreground mt-4">
-            Join 500+ students already testing Askit India
+            Join our community of beta testers of Askit India
           </p>
         </div>
       </div>

@@ -13,8 +13,8 @@ const categories = [
   },
   {
     icon: Dumbbell,
-    title: "Fitness & Nutrition",
-    description: "Workout partners, diet planning"
+    title: "Fitness & Health",
+    description: "Gym assistance for newbies and workout partners"
   },
   {
     icon: Calendar,
@@ -39,7 +39,7 @@ const categories = [
   {
     icon: MoreHorizontal,
     title: "...and more",
-    description: "New categories added every week"
+    description: "More categories and custom listing"
   }
 ];
 
@@ -56,16 +56,6 @@ const Categories = () => {
           </p>
         </div>
 
-        {/* Placeholder for uploaded creative */}
-        <div className="mb-12">
-          <div className="bg-card border border-border rounded-2xl p-12 text-center max-w-4xl mx-auto">
-            <div className="text-muted-foreground">
-              <Camera className="w-16 h-16 mx-auto mb-4 opacity-50" />
-              <p className="text-lg">Category Grid/Carousel Creative Placeholder</p>
-              <p className="text-sm mt-2">Upload your custom category visualization here</p>
-            </div>
-          </div>
-        </div>
 
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -75,7 +65,10 @@ const Categories = () => {
               return (
                 <div
                   key={index}
-                  className="group p-6 bg-card border border-border rounded-xl hover:border-primary/50 hover:shadow-glow transition-all duration-300 transform hover:-translate-y-1"
+                  className="group p-6 bg-card border border-border rounded-xl hover:border-primary/50 hover:shadow-glow transition-all duration-300 transform hover:-translate-y-2 hover:scale-105 animate-fade-in"
+                  style={{
+                    animationDelay: `${index * 100}ms`
+                  }}
                 >
                   <div className="text-center">
                     <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/30 transition-colors">
