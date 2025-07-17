@@ -1,21 +1,7 @@
-import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Smartphone } from 'lucide-react';
 
 const HeroSection = () => {
-  const [taglineVisible, setTaglineVisible] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      if (scrollY > 100) {
-        setTaglineVisible(true);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   return (
     <section className="min-h-screen bg-gradient-hero flex items-center justify-center relative overflow-hidden">
@@ -35,17 +21,13 @@ const HeroSection = () => {
             <span className="text-primary"> Your skills. Your campus. Your earnings.</span>
           </p>
 
-          {/* Animated Tagline Reveal */}
-          <div className={`transition-all duration-1000 transform ${
-            taglineVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-          }`}>
-            <div className="bg-card/80 backdrop-blur-md border border-border rounded-2xl p-8 mb-12 max-w-4xl mx-auto">
-              <h2 className="text-3xl md:text-5xl font-bold font-poppins">
-                <span className="text-foreground">Real Tasks. Real Skills. Real Earnings.</span>
-                <br />
-                <span className="text-primary">Just Askit.</span>
-              </h2>
-            </div>
+          {/* Main Tagline */}
+          <div className="bg-card/80 backdrop-blur-md border border-border rounded-2xl p-8 mb-12 max-w-4xl mx-auto animate-fade-in-up">
+            <h2 className="text-3xl md:text-5xl font-bold font-poppins">
+              <span className="text-foreground">Real Tasks. Real Skills. Real Earnings.</span>
+              <br />
+              <span className="text-primary">Just Askit.</span>
+            </h2>
           </div>
 
           {/* Phone Mockup Placeholder */}
