@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -34,12 +35,12 @@ const Navigation = () => {
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
-            <button 
-              onClick={() => scrollToSection('about')}
+            <Link 
+              to="/about"
               className="text-foreground hover:text-primary transition-colors duration-300"
             >
               About Us
-            </button>
+            </Link>
             <button 
               onClick={() => scrollToSection('how-it-works')}
               className="text-foreground hover:text-primary transition-colors duration-300"
