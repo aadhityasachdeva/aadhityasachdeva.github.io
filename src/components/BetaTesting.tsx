@@ -11,7 +11,7 @@ const BetaTesting = () => {
               Be Part of Our Beta Tribe <Rocket className="inline w-12 h-12 text-primary ml-2" />
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              We're currently testing in <span className="text-primary font-semibold">Delhi NCR & Mumbai</span>. 
+              We're currently testing in <span className="text-primary font-semibold">Select Cities</span> 
               Help shape the future of student freelancing.
             </p>
           </div>

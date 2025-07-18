@@ -27,7 +27,7 @@ const Footer = () => {
               {/* Social Links */}
               <div className="flex space-x-4">
                 <a 
-                  href="https://instagram.com/askitindia" 
+                  href="https://www.instagram.com/askit.india/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="w-10 h-10 bg-card border border-border rounded-lg flex items-center justify-center hover:border-primary hover:bg-primary/10 transition-colors group"
@@ -35,7 +35,7 @@ const Footer = () => {
                   <Instagram className="w-5 h-5 text-muted-foreground group-hover:text-primary" />
                 </a>
                 <a 
-                  href="https://linkedin.com/company/askitindia" 
+                  href="https://www.linkedin.com/company/askitindia/posts/?feedView=all" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="w-10 h-10 bg-card border border-border rounded-lg flex items-center justify-center hover:border-primary hover:bg-primary/10 transition-colors group"
