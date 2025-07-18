@@ -7,20 +7,24 @@ import {
 
 const faqData = [
   {
-    question: "Who can post a task on Askit?",
-    answer: "Any verified college student can post tasks or offer services. We verify student status through college email addresses and student ID verification to maintain a trusted community."
+    question: "Who can join Askit?",
+    answer: "Any college student in India can join Askit as a service provider to earn using their skills. If you're someone who needs help with everyday tasks, academic work, or creative projects, you can join as a service requester. We're currently beta testing in select cities, so early users will get exclusive access and benefits."
   },
   {
-    question: "Are the students on Askit verified?",
-    answer: "Yes! All students go through our verification process using their college email and student credentials. This ensures you're always connecting with genuine students from your campus community."
+    question: "How do payments work?",
+    answer: "Currently, payments are made directly via UPI — there is no in-app payment gateway yet. To ensure genuine transactions, a task cannot be marked as complete unless both the service provider and the requester confirm it. This mutual agreement system helps maintain trust, fairness, and accountability for both sides."
   },
   {
-    question: "How do I know my task will be done well?",
-    answer: "Our platform features student profiles with skills, ratings, and reviews from previous tasks. You can also communicate directly before hiring to ensure they're the right fit for your needs."
+    question: "Is my data secure?",
+    answer: "Yes, absolutely. At Askit, we take data privacy seriously. All user data is encrypted and securely stored, and we never share your personal information with third parties without consent. We also verify users to maintain a safe and trusted community."
   },
   {
-    question: "Is payment handled securely?",
-    answer: "Absolutely. We use secure payment gateways and hold payments in escrow until tasks are completed satisfactorily. This protects both task posters and service providers."
+    question: "What incentives do beta testers get?",
+    answer: "Beta testers get priority access, faster task matching, and a chance to be part of our exclusive feedback circle - influencing how the platform evolves. Plus, early users will be recognized as founding members and may receive exclusive perks once we launch publicly."
+  },
+  {
+    question: "When will Askit launch publicly?",
+    answer: "We're currently testing in Delhi NCR and Mumbai, refining the experience with real users. The official public launch is planned for later this year — and beta users will get early access to all upcoming features."
   }
 ];
 
