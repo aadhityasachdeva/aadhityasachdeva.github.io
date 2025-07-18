@@ -33,14 +33,11 @@ const HeroSection = () => {
             {/* Right side - App Screen Preview */}
             <div className="flex justify-center lg:justify-end">
               <div className="max-w-lg mx-auto lg:mx-0 transform hover:scale-105 transition-transform duration-500 animate-fade-in-up">
-                <div className="relative group">
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-electric-blue-glow/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-                  <img 
-                    src="/lovable-uploads/fee3ac75-bef9-4fc6-98a9-39bfc5921164.png" 
-                    alt="Askit app screens showing task listings and logo"
-                    className="relative w-full h-auto rounded-2xl shadow-2xl border border-primary/20"
-                  />
-                </div>
+                <img 
+                  src="/lovable-uploads/fee3ac75-bef9-4fc6-98a9-39bfc5921164.png" 
+                  alt="Askit app screens showing task listings and logo"
+                  className="w-full h-auto rounded-2xl shadow-lg"
+                />
               </div>
             </div>
           </div>
