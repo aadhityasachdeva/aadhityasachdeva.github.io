@@ -41,18 +41,23 @@ const Navigation = () => {
             >
               About Us
             </Link>
-            <Link 
-              to="/"
+            <a 
+              href="/#hero"
               className="text-foreground hover:text-primary transition-colors duration-300"
+              onClick={(e) => {
+                e.preventDefault();
+                window.location.hash = '#hero';
+                document.getElementById('hero')?.scrollIntoView({ behavior: 'smooth' });
+              }}
             >
               Home
-            </Link>
-            <button 
-              onClick={() => scrollToSection('beta-testing')}
+            </a>
+            <Link 
+              to="/beta-access"
               className="text-foreground hover:text-primary transition-colors duration-300"
             >
               Beta Access
-            </button>
+            </Link>
             <button 
               onClick={() => scrollToSection('contact')}
               className="text-foreground hover:text-primary transition-colors duration-300"
