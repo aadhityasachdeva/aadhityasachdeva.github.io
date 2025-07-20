@@ -50,12 +50,12 @@ const Footer = () => {
               <h3 className="font-semibold font-poppins mb-4 text-foreground">Quick Links</h3>
               <ul className="space-y-3">
                 <li>
-                  <button 
-                    onClick={() => scrollToSection('about')}
+                  <a 
+                    href="/about"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
                     About Us
-                  </button>
+                  </a>
                 </li>
                 <li>
                   <button 

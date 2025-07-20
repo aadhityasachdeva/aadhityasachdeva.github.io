@@ -80,7 +80,7 @@ const About = () => {
             <h2 className="text-3xl md:text-4xl font-bold font-poppins mb-12 text-center">
               About the Core Team
             </h2>
-            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {/* Aryan Vaid */}
               <div className="bg-card border border-border rounded-xl p-8 text-center">
                 <div className="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -101,7 +101,19 @@ const About = () => {
                 <h3 className="text-xl font-bold font-poppins mb-2">Aadhitya Sachdeva</h3>
                 <p className="text-primary font-semibold mb-4">The Co-founder</p>
                 <p className="text-muted-foreground text-sm">
-                  [Educational background to be added]
+                  Pursuing B.Tech from Amity University, Noida
+                </p>
+              </div>
+
+              {/* Rehan Haider */}
+              <div className="bg-card border border-border rounded-xl p-8 text-center">
+                <div className="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-2xl font-bold text-primary">RH</span>
+                </div>
+                <h3 className="text-xl font-bold font-poppins mb-2">Rehan Haider</h3>
+                <p className="text-primary font-semibold mb-4">Design Lead</p>
+                <p className="text-muted-foreground text-sm">
+                  Pursuing B.Des from National Institute of Design, Ahmedabad
                 </p>
               </div>
             </div>

@@ -41,17 +41,17 @@ const Navigation = () => {
             >
               About Us
             </Link>
-            <button 
-              onClick={() => scrollToSection('how-it-works')}
+            <Link 
+              to="/"
               className="text-foreground hover:text-primary transition-colors duration-300"
             >
-              How It Works
-            </button>
+              Home
+            </Link>
             <button 
-              onClick={() => scrollToSection('faq')}
+              onClick={() => scrollToSection('beta-testing')}
               className="text-foreground hover:text-primary transition-colors duration-300"
             >
-              FAQ
+              Beta Access
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
