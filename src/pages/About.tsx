@@ -1,9 +1,12 @@
 import { ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
 
 const About = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Navigation />
       {/* Header with back button */}
       <div className="container mx-auto px-4 py-8">
         <Link 
@@ -75,6 +78,17 @@ const About = () => {
             </section>
           </div>
 
+          {/* Progress Section */}
+          <section className="mb-16">
+            <div className="flex justify-center">
+              <img 
+                src="/lovable-uploads/4005c8a2-4b73-4ef9-8eca-7016690d7fe2.png" 
+                alt="Our Progress So Far" 
+                className="w-full max-w-4xl rounded-xl shadow-lg"
+              />
+            </div>
+          </section>
+
           {/* Core Team Section */}
           <section className="mb-16">
             <h2 className="text-3xl md:text-4xl font-bold font-poppins mb-12 text-center">
@@ -120,6 +134,7 @@ const About = () => {
           </section>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
