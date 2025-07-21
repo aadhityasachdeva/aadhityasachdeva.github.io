@@ -12,13 +12,7 @@ const BetaAccess = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (email) {
-      toast({
-        title: "Thank you for joining!",
-        description: "We'll send you beta access details soon.",
-      });
-      setEmail('');
-    }
+    window.open('https://forms.gle/dhikUeKMqKN2ytoS9', '_blank');
   };
 
   return (
