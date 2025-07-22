@@ -8,23 +8,23 @@ import {
 const faqData = [
   {
     question: "Who can join Askit?",
-    answer: "Any college student in India can join Askit as a service provider to earn using their skills. If you're someone who needs help with everyday tasks, academic work, or creative projects, you can join as a service requester. We're currently beta testing in select cities, so early users will get exclusive access and benefits."
+    answer: "Any college student in India can join Askit as a service provider to earn using their skills. If you're someone who needs help with everyday tasks, academic work, or creative projects, you can join as a service requester."
   },
   {
     question: "How do payments work?",
-    answer: "Currently, payments are made directly via UPI — there is no in-app payment gateway yet. To ensure genuine transactions, a task cannot be marked as complete unless both the service provider and the requester confirm it. This mutual agreement system helps maintain trust, fairness, and accountability for both sides."
+    answer: "Currently, payments are made directly via UPI — there is no in-app payment gateway yet. To ensure genuine transactions, a task cannot be marked as complete unless both the service provider and the requester confirm it."
   },
   {
-    question: "Is my data secure?",
-    answer: "Yes, absolutely. At Askit, we take data privacy seriously. All user data is encrypted and securely stored, and we never share your personal information with third parties without consent. We also verify users to maintain a safe and trusted community."
+    question: "Do I need prior experience to offer a service?",
+    answer: "Not at all! Askit is built on the idea that everyone has something valuable to offer, from photography and tutoring to writing assignments or organising events. If you're good at something, just list it!"
   },
   {
     question: "What incentives do beta testers get?",
-    answer: "Beta testers get priority access, faster task matching, and a chance to be part of our exclusive feedback circle - influencing how the platform evolves. Plus, early users will be recognized as founding members and may receive exclusive perks once we launch publicly."
+    answer: "Beta testers get priority access, faster task matching, and a chance to be part of our exclusive feedback circle - influencing how the platform evolves."
   },
   {
     question: "When will Askit launch publicly?",
-    answer: "We're currently testing in Delhi NCR and Mumbai, refining the experience with real users. The official public launch is planned for later this year — and beta users will get early access to all upcoming features."
+    answer: "We're currently testing in Delhi NCR and Mumbai, refining the experience with real users. The official public launch is planned for later this year."
   }
 ];
 
