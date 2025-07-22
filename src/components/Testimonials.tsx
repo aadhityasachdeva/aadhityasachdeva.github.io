@@ -91,7 +91,7 @@ const Testimonials = () => {
                     
                     <div className="flex items-center justify-between">
                       <cite className="text-muted-foreground not-italic">
-                        — {testimonial.author}
+                        {testimonial.author}
                       </cite>
                       <span className="text-xs bg-primary/20 text-primary px-3 py-1 rounded-full">
                         {testimonial.category}

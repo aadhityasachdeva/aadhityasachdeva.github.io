@@ -26,13 +26,22 @@ const About = () => {
             <h2 className="text-3xl md:text-4xl font-bold font-poppins mb-8 text-center">
               Our Story
             </h2>
-            <div className="prose prose-lg max-w-none text-muted-foreground">
-              <p className="mb-6">
-                Askit started with a simple conversation between two friends about everyday needs and untapped potential within student communities. What began as an idea grew into a shared vision: to build a platform where students could <span className="text-primary font-semibold">earn through their skills</span> and <span className="text-primary font-semibold">help one another through peer-to-peer collaboration</span>.
-              </p>
-              <p>
-                We've gained recognition at top entrepreneurial platforms, cleared Zonals at Eureka!, connected with mentors at iSummit (IIT Bombay), and reached finals of Gujarat i-Hub's S4 initiative — shaping Askit into a growing, student-driven ecosystem where getting work done is just one "ask" away.
-              </p>
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div className="prose prose-lg max-w-none text-muted-foreground">
+                <p className="mb-6">
+                  Askit started with a simple conversation between two friends about everyday needs and untapped potential within student communities. What began as an idea grew into a shared vision: to build a platform where students could <span className="text-primary font-semibold">earn through their skills</span> and <span className="text-primary font-semibold">help one another through peer-to-peer collaboration</span>.
+                </p>
+                <p>
+                  We've gained recognition at top entrepreneurial platforms, cleared Zonals at Eureka!, connected with mentors at iSummit (IIT Bombay), and reached finals of Gujarat i-Hub's S4 initiative, shaping Askit into a growing, student-driven ecosystem where getting work done is just one "ask" away.
+                </p>
+              </div>
+              <div className="flex justify-center">
+                <img 
+                  src="/lovable-uploads/456160af-f008-4b10-8c5e-0a8f01152141.png" 
+                  alt="Askit mobile app interface showing category selection"
+                  className="w-full max-w-sm rounded-2xl shadow-lg"
+                />
+              </div>
             </div>
           </section>
 
@@ -44,10 +53,10 @@ const About = () => {
                 Our Mission
               </h2>
               <p className="text-muted-foreground mb-4">
-                To empower students across India by creating a platform where they can earn, connect, and grow through real-world tasks — while providing accessible, trustworthy help to anyone who needs it.
+                To empower students across India by creating a platform where they can earn, connect, and grow through real-world tasks while providing accessible, trustworthy help to anyone who needs it.
               </p>
               <p className="text-muted-foreground">
-                We believe that peer-to-peer support is the future — and Askit is building that future, one task at a time.
+                We believe that peer-to-peer support is the future and Askit is building that future, one task at a time.
               </p>
             </section>
 
@@ -57,13 +66,73 @@ const About = () => {
                 Our Vision
               </h2>
               <p className="text-muted-foreground mb-4">
-                To build India's first, student-first service marketplace — where every skill is valued, every task is an opportunity, and every student becomes part of a powerful support ecosystem.
+                To build India's first, student-first service marketplace where every skill is valued, every task is an opportunity, and every student becomes part of a powerful support ecosystem.
               </p>
               <p className="text-muted-foreground">
-                We envision a world where students don't just survive college — they thrive in it, together.
+                We envision a world where students don't just survive college, they thrive in it, together.
               </p>
             </section>
           </div>
+
+          {/* Our Progress Section */}
+          <section className="mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold font-poppins mb-12 text-center">
+              Our Progress
+            </h2>
+            <div className="max-w-4xl mx-auto">
+              <div className="relative">
+                {/* Timeline line */}
+                <div className="absolute left-4 md:left-1/2 md:transform md:-translate-x-1/2 top-0 bottom-0 w-0.5 bg-primary/30"></div>
+                
+                {/* Timeline items */}
+                <div className="space-y-12">
+                  {/* Item 1 */}
+                  <div className="relative flex items-center md:justify-center">
+                    <div className="absolute left-0 md:left-1/2 md:transform md:-translate-x-1/2 w-8 h-8 bg-primary rounded-full border-4 border-background z-10"></div>
+                    <div className="ml-12 md:ml-0 md:w-1/2 md:pr-8 md:text-right">
+                      <div className="bg-card border border-border rounded-xl p-6">
+                        <h3 className="text-xl font-bold font-poppins mb-2 text-primary">MVP v1 launched in May 2025</h3>
+                        <p className="text-muted-foreground">Our first version hits the market with core functionality.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Item 2 */}
+                  <div className="relative flex items-center md:justify-center">
+                    <div className="absolute left-0 md:left-1/2 md:transform md:-translate-x-1/2 w-8 h-8 bg-primary rounded-full border-4 border-background z-10"></div>
+                    <div className="ml-12 md:ml-0 md:w-1/2 md:pl-8">
+                      <div className="bg-card border border-border rounded-xl p-6">
+                        <h3 className="text-xl font-bold font-poppins mb-2 text-primary">100+ tasks posted</h3>
+                        <p className="text-muted-foreground">Real tasks completed through our platform.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Item 3 */}
+                  <div className="relative flex items-center md:justify-center">
+                    <div className="absolute left-0 md:left-1/2 md:transform md:-translate-x-1/2 w-8 h-8 bg-primary rounded-full border-4 border-background z-10"></div>
+                    <div className="ml-12 md:ml-0 md:w-1/2 md:pr-8 md:text-right">
+                      <div className="bg-card border border-border rounded-xl p-6">
+                        <h3 className="text-xl font-bold font-poppins mb-2 text-primary">Iterated based on feedback</h3>
+                        <p className="text-muted-foreground">MVP v2 now live. We have improved our platform based on user suggestions.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Item 4 */}
+                  <div className="relative flex items-center md:justify-center">
+                    <div className="absolute left-0 md:left-1/2 md:transform md:-translate-x-1/2 w-8 h-8 bg-primary rounded-full border-4 border-background z-10"></div>
+                    <div className="ml-12 md:ml-0 md:w-1/2 md:pl-8">
+                      <div className="bg-card border border-border rounded-xl p-6">
+                        <h3 className="text-xl font-bold font-poppins mb-2 text-primary">Currently testing in Select Cities</h3>
+                        <p className="text-muted-foreground">Focused on major student hubs in India.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
 
           {/* Core Team Section */}
           <section className="mb-16">

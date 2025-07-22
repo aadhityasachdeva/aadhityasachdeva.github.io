@@ -12,7 +12,7 @@ const faqData = [
   },
   {
     question: "How do payments work?",
-    answer: "Currently, payments are made directly via UPI — there is no in-app payment gateway yet. To ensure genuine transactions, a task cannot be marked as complete unless both the service provider and the requester confirm it."
+    answer: "Currently, payments are made directly via UPI, there is no in-app payment gateway yet. To ensure genuine transactions, a task cannot be marked as complete unless both the service provider and the requester confirm it."
   },
   {
     question: "Do I need prior experience to offer a service?",
