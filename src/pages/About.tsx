@@ -28,13 +28,10 @@ const About = () => {
             </h2>
             <div className="prose prose-lg max-w-none text-muted-foreground">
               <p className="mb-6">
-                Askit started with a simple late-night conversation between two friends — a discussion about everyday needs and the untapped potential within student communities. What began as an idea soon grew into a shared vision: to build a platform where students could <span className="text-primary font-semibold">earn through their skills</span> and <span className="text-primary font-semibold">help one another through peer-to-peer collaboration</span>.
-              </p>
-              <p className="mb-6">
-                Over the past year, Askit has gained momentum through recognition and validation at some of the country's top entrepreneurial platforms. We <span className="text-primary font-semibold">cleared Zonals at Eureka!, Asia's largest business model competition</span>, and connected with mentors and incubators at <span className="text-primary font-semibold">iSummit</span>, hosted by <span className="text-primary font-semibold">IIT Bombay's E-Cell</span>. We also reached the final round of the <span className="text-primary font-semibold">Startup Srujan Seed Support (S4)</span> initiative under <span className="text-primary font-semibold">Gujarat i-Hub</span>, a flagship startup grant program supported by the <span className="text-primary font-semibold">Ministry of Commerce & Industry, Government of India</span>.
+                Askit started with a simple conversation between two friends about everyday needs and untapped potential within student communities. What began as an idea grew into a shared vision: to build a platform where students could <span className="text-primary font-semibold">earn through their skills</span> and <span className="text-primary font-semibold">help one another through peer-to-peer collaboration</span>.
               </p>
               <p>
-                These milestones, along with our relentless motivation and user-first approach, have shaped Askit into what it is today — a growing, student-driven ecosystem where getting work done is just one "ask" away.
+                We've gained recognition at top entrepreneurial platforms, cleared Zonals at Eureka!, connected with mentors at iSummit (IIT Bombay), and reached finals of Gujarat i-Hub's S4 initiative — shaping Askit into a growing, student-driven ecosystem where getting work done is just one "ask" away.
               </p>
             </div>
           </section>
@@ -68,14 +65,38 @@ const About = () => {
             </section>
           </div>
 
-          {/* Progress Section */}
+          {/* How It Works - Mobile Interface Section */}
           <section className="mb-16">
-            <div className="flex justify-center">
-              <img 
-                src="/lovable-uploads/4005c8a2-4b73-4ef9-8eca-7016690d7fe2.png" 
-                alt="Our Progress So Far" 
-                className="w-full max-w-4xl rounded-xl shadow-lg"
-              />
+            <div className="bg-card border border-border rounded-xl p-8">
+              <div className="text-center mb-8">
+                <h2 className="text-3xl md:text-4xl font-bold font-poppins mb-4">
+                  Need help with anything?
+                </h2>
+                <p className="text-xl text-muted-foreground mb-2">How does it work?</p>
+                <p className="text-lg text-primary font-semibold">Select a category and post a task</p>
+              </div>
+              
+              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 max-w-4xl mx-auto">
+                {[
+                  "Home Work & Assignments",
+                  "Office Work", 
+                  "Lift-Move-Pack",
+                  "Tutoring",
+                  "Computer IT",
+                  "Cleaning",
+                  "Video & Editing",
+                  "Photography", 
+                  "Design",
+                  "Delivery & Errands",
+                  "Pet Care",
+                  "Gardening & Plant Care"
+                ].map((category) => (
+                  <div key={category} className="bg-background border border-border rounded-lg p-4 text-center hover:bg-muted/50 transition-colors">
+                    <div className="w-8 h-8 bg-primary/20 rounded-lg mx-auto mb-2"></div>
+                    <p className="text-sm font-medium text-foreground">{category}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </section>
 
