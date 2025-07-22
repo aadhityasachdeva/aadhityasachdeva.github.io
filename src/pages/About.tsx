@@ -65,41 +65,6 @@ const About = () => {
             </section>
           </div>
 
-          {/* How It Works - Mobile Interface Section */}
-          <section className="mb-16">
-            <div className="bg-card border border-border rounded-xl p-8">
-              <div className="text-center mb-8">
-                <h2 className="text-3xl md:text-4xl font-bold font-poppins mb-4">
-                  Need help with anything?
-                </h2>
-                <p className="text-xl text-muted-foreground mb-2">How does it work?</p>
-                <p className="text-lg text-primary font-semibold">Select a category and post a task</p>
-              </div>
-              
-              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 max-w-4xl mx-auto">
-                {[
-                  "Home Work & Assignments",
-                  "Office Work", 
-                  "Lift-Move-Pack",
-                  "Tutoring",
-                  "Computer IT",
-                  "Cleaning",
-                  "Video & Editing",
-                  "Photography", 
-                  "Design",
-                  "Delivery & Errands",
-                  "Pet Care",
-                  "Gardening & Plant Care"
-                ].map((category) => (
-                  <div key={category} className="bg-background border border-border rounded-lg p-4 text-center hover:bg-muted/50 transition-colors">
-                    <div className="w-8 h-8 bg-primary/20 rounded-lg mx-auto mb-2"></div>
-                    <p className="text-sm font-medium text-foreground">{category}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
           {/* Core Team Section */}
           <section className="mb-16">
             <h2 className="text-3xl md:text-4xl font-bold font-poppins mb-12 text-center">
