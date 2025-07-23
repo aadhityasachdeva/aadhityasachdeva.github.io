@@ -18,6 +18,12 @@ const HeroSection = () => {
               <br />
               <span className="text-blue-500 font-bold">Just Askit.</span>
             </h2>
+            <div className="animate-fade-in-up">
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
+                Join Now
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </div>
           </div>
 
           {/* Two-column layout */}
