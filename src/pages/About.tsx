@@ -31,9 +31,28 @@ const About = () => {
                 <p className="mb-6">
                   Askit started with a simple conversation between two friends about everyday needs and untapped potential within student communities. What began as an idea grew into a shared vision: to build a platform where students could <span className="text-primary font-semibold">earn through their skills</span> and <span className="text-primary font-semibold">help one another through peer-to-peer collaboration</span>.
                 </p>
-                <p>
-                  We've gained recognition at top entrepreneurial platforms, cleared Zonals at Eureka!, connected with mentors at iSummit (IIT Bombay), and reached finals of Gujarat i-Hub's S4 initiative, shaping Askit into a growing, student-driven ecosystem where getting work done is just one "ask" away.
-                </p>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0"></div>
+                    <p>Gained recognition at <span className="text-primary font-semibold">top entrepreneurial platforms</span></p>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0"></div>
+                    <p>Cleared <span className="text-primary font-semibold">Zonals at Eureka!</span></p>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0"></div>
+                    <p>Connected with mentors at <span className="text-primary font-semibold">iSummit (IIT Bombay)</span></p>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0"></div>
+                    <p>Reached <span className="text-primary font-semibold">finals of Gujarat i-Hub's S4 initiative</span></p>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0"></div>
+                    <p>Building a <span className="text-primary font-semibold">student-driven ecosystem</span> where getting work done is just one <span className="text-primary font-semibold">"ask"</span> away</p>
+                  </div>
+                </div>
               </div>
               <div className="flex justify-center">
                 <img 
@@ -79,55 +98,53 @@ const About = () => {
             <h2 className="text-3xl md:text-4xl font-bold font-poppins mb-12 text-center">
               Our Progress
             </h2>
-            <div className="max-w-4xl mx-auto">
-              <div className="relative">
-                {/* Timeline line */}
-                <div className="absolute left-4 md:left-1/2 md:transform md:-translate-x-1/2 top-0 bottom-0 w-0.5 bg-primary/30"></div>
-                
-                {/* Timeline items */}
-                <div className="space-y-12">
-                  {/* Item 1 */}
-                  <div className="relative flex items-center md:justify-center">
-                    <div className="absolute left-0 md:left-1/2 md:transform md:-translate-x-1/2 w-8 h-8 bg-primary rounded-full border-4 border-background z-10"></div>
-                    <div className="ml-12 md:ml-0 md:w-1/2 md:pr-8 md:text-right">
-                      <div className="bg-card border border-border rounded-xl p-6">
-                        <h3 className="text-xl font-bold font-poppins mb-2 text-primary">MVP v1 launched in May 2025</h3>
-                        <p className="text-muted-foreground">Our first version hits the market with core functionality.</p>
-                      </div>
+            <div className="max-w-6xl mx-auto">
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {/* Item 1 */}
+                <div className="relative group">
+                  <div className="bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20 rounded-2xl p-6 h-full hover:shadow-lg hover:shadow-primary/10 transition-all duration-300">
+                    <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/30 transition-colors">
+                      <div className="w-6 h-6 bg-primary rounded-full"></div>
                     </div>
+                    <h3 className="text-lg font-bold font-poppins mb-3 text-primary">MVP v1 Launch</h3>
+                    <p className="text-sm text-muted-foreground mb-2 font-medium">May 2025</p>
+                    <p className="text-sm text-muted-foreground">Our first version hits the market with core functionality.</p>
                   </div>
+                </div>
 
-                  {/* Item 2 */}
-                  <div className="relative flex items-center md:justify-center">
-                    <div className="absolute left-0 md:left-1/2 md:transform md:-translate-x-1/2 w-8 h-8 bg-primary rounded-full border-4 border-background z-10"></div>
-                    <div className="ml-12 md:ml-0 md:w-1/2 md:pl-8">
-                      <div className="bg-card border border-border rounded-xl p-6">
-                        <h3 className="text-xl font-bold font-poppins mb-2 text-primary">100+ tasks posted</h3>
-                        <p className="text-muted-foreground">Real tasks completed through our platform.</p>
-                      </div>
+                {/* Item 2 */}
+                <div className="relative group">
+                  <div className="bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20 rounded-2xl p-6 h-full hover:shadow-lg hover:shadow-primary/10 transition-all duration-300">
+                    <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/30 transition-colors">
+                      <div className="w-6 h-6 bg-primary rounded-full"></div>
                     </div>
+                    <h3 className="text-lg font-bold font-poppins mb-3 text-primary">100+ Tasks Posted</h3>
+                    <p className="text-sm text-muted-foreground mb-2 font-medium">Real Impact</p>
+                    <p className="text-sm text-muted-foreground">Real tasks completed through our platform.</p>
                   </div>
+                </div>
 
-                  {/* Item 3 */}
-                  <div className="relative flex items-center md:justify-center">
-                    <div className="absolute left-0 md:left-1/2 md:transform md:-translate-x-1/2 w-8 h-8 bg-primary rounded-full border-4 border-background z-10"></div>
-                    <div className="ml-12 md:ml-0 md:w-1/2 md:pr-8 md:text-right">
-                      <div className="bg-card border border-border rounded-xl p-6">
-                        <h3 className="text-xl font-bold font-poppins mb-2 text-primary">Iterated based on feedback</h3>
-                        <p className="text-muted-foreground">MVP v2 now live. We have improved our platform based on user suggestions.</p>
-                      </div>
+                {/* Item 3 */}
+                <div className="relative group">
+                  <div className="bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20 rounded-2xl p-6 h-full hover:shadow-lg hover:shadow-primary/10 transition-all duration-300">
+                    <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/30 transition-colors">
+                      <div className="w-6 h-6 bg-primary rounded-full"></div>
                     </div>
+                    <h3 className="text-lg font-bold font-poppins mb-3 text-primary">MVP v2 Live</h3>
+                    <p className="text-sm text-muted-foreground mb-2 font-medium">User-Driven</p>
+                    <p className="text-sm text-muted-foreground">Improved platform based on user suggestions and feedback.</p>
                   </div>
+                </div>
 
-                  {/* Item 4 */}
-                  <div className="relative flex items-center md:justify-center">
-                    <div className="absolute left-0 md:left-1/2 md:transform md:-translate-x-1/2 w-8 h-8 bg-primary rounded-full border-4 border-background z-10"></div>
-                    <div className="ml-12 md:ml-0 md:w-1/2 md:pl-8">
-                      <div className="bg-card border border-border rounded-xl p-6">
-                        <h3 className="text-xl font-bold font-poppins mb-2 text-primary">Currently testing in Select Cities</h3>
-                        <p className="text-muted-foreground">Focused on major student hubs in India.</p>
-                      </div>
+                {/* Item 4 */}
+                <div className="relative group">
+                  <div className="bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20 rounded-2xl p-6 h-full hover:shadow-lg hover:shadow-primary/10 transition-all duration-300">
+                    <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/30 transition-colors">
+                      <div className="w-6 h-6 bg-primary rounded-full"></div>
                     </div>
+                    <h3 className="text-lg font-bold font-poppins mb-3 text-primary">Testing Phase</h3>
+                    <p className="text-sm text-muted-foreground mb-2 font-medium">Select Cities</p>
+                    <p className="text-sm text-muted-foreground">Focused on major student hubs across India.</p>
                   </div>
                 </div>
               </div>
