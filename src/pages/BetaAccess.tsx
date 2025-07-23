@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Mail, Instagram, Linkedin, Rocket, CheckCircle, Target, Award } from 'lucide-react';
+import { Mail, Instagram, Linkedin, Rocket, CheckCircle, Target, Award, ArrowRight } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { useToast } from '@/hooks/use-toast';
@@ -103,9 +103,7 @@ const BetaAccess = () => {
                     🔓 Get Early Access
                   </h3>
                   <p className="text-muted-foreground">
-                    Enter your email below and become a part of our beta testing community.
-                    <br />
-                    We'll send you everything you need to get started.
+                    Enter your email below and get access to the platform
                   </p>
                 </div>
 
@@ -124,6 +122,24 @@ const BetaAccess = () => {
                     </Button>
                   </div>
                 </form>
+              </div>
+
+              {/* Service Provider Section */}
+              <div className="text-center bg-card border border-border rounded-2xl p-8 mb-16">
+                <h3 className="text-2xl font-bold font-poppins mb-6">
+                  🔧 Join as a Verified Service Provider
+                </h3>
+                <p className="text-muted-foreground mb-6">
+                  Are you skilled and ready to offer services to fellow students? Join our verified service provider program.
+                </p>
+                <Button 
+                  size="lg" 
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+                  onClick={() => window.open('https://docs.google.com/forms/d/1m_pSTXVp-sczIw5V67C4oc_trCH4pJmwh3c-xidLa14/edit?pli=1', '_blank')}
+                >
+                  Become a Service Provider
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
               </div>
 
               {/* Contact Section */}

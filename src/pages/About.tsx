@@ -34,10 +34,6 @@ const About = () => {
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0"></div>
-                    <p>Gained recognition at <span className="text-primary font-semibold">top entrepreneurial platforms</span></p>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0"></div>
                     <p>Cleared <span className="text-primary font-semibold">Zonals at Eureka!</span></p>
                   </div>
                   <div className="flex items-center gap-3">
@@ -48,11 +44,10 @@ const About = () => {
                     <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0"></div>
                     <p>Reached <span className="text-primary font-semibold">finals of Gujarat i-Hub's S4 initiative</span></p>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0"></div>
-                    <p>Building a <span className="text-primary font-semibold">student-driven ecosystem</span> where getting work done is just one <span className="text-primary font-semibold">"ask"</span> away</p>
-                  </div>
                 </div>
+                <p className="text-muted-foreground leading-relaxed mt-4">
+                  We've gained recognition at top entrepreneurial platforms, shaping Askit into a growing, student-driven ecosystem where getting work done is just one "ask" away.
+                </p>
               </div>
               <div className="flex justify-center">
                 <img 
