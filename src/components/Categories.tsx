@@ -1,4 +1,4 @@
-import { BookOpen, Briefcase, GraduationCap, Computer, Video, Camera, Palette, Dumbbell, Truck, ArrowRightLeft, Heart, Calendar, Settings } from 'lucide-react';
+import { BookOpen, Briefcase, GraduationCap, Computer, Video, Camera, Palette, Fingerprint, Dumbbell, Truck, ArrowRightLeft, Heart, Calendar, Settings } from 'lucide-react';
 
 const categories = [
   {
@@ -37,6 +37,11 @@ const categories = [
     description: "Graphics, logos, UI/UX, creative work"
   },
   {
+    icon: Fingerprint,
+    title: "Custom",
+    description: "Special requests and unique tasks"
+  },
+  {
     icon: Dumbbell,
     title: "Fitness",
     description: "Gym buddies, workout plans, sports"
@@ -60,11 +65,6 @@ const categories = [
     icon: Calendar,
     title: "Events",
     description: "Planning, coordination, setup, management"
-  },
-  {
-    icon: Settings,
-    title: "Custom",
-    description: "Special requests and unique tasks"
   }
 ];
 
