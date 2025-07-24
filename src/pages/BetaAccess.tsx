@@ -23,13 +23,28 @@ const BetaAccess = () => {
         {/* Hero Section */}
         <section className="py-20 bg-gradient-hero">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <div className="mb-8">
-                <h1 className="text-4xl md:text-6xl font-bold font-poppins mb-6">
-                  <Rocket className="inline w-16 h-16 text-primary mb-4" />
-                  <br />
-                  Join the <span className="text-primary">Askit Beta Tribe</span>
-                </h1>
+            <div className="max-w-6xl mx-auto">
+              <div className="grid lg:grid-cols-2 gap-12 items-center">
+                <div className="text-center lg:text-left">
+                  <h1 className="text-4xl md:text-6xl font-bold font-poppins mb-6">
+                    <Rocket className="inline w-16 h-16 text-primary mb-4" />
+                    <br />
+                    Join the <span className="text-primary">Askit Beta Tribe</span>
+                  </h1>
+                  <p className="text-xl text-muted-foreground mb-8 max-w-2xl">
+                    Experience the future of student services with our mobile-first platform
+                  </p>
+                </div>
+                <div className="flex justify-center lg:justify-end">
+                  <div className="relative">
+                    <img 
+                      src="/lovable-uploads/31b6046b-2bd4-4cb4-b4a9-0367c99aa8aa.png" 
+                      alt="Askit mobile app interface showing location-based services" 
+                      className="w-80 h-auto drop-shadow-2xl"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent rounded-3xl"></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
