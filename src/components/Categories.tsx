@@ -57,14 +57,14 @@ const categories = [
     description: "Pet sitting, walking, grooming, care"
   },
   {
-    icon: Fingerprint,
-    title: "Custom",
-    description: "Special requests and unique tasks"
-  },
-  {
     icon: Calendar,
     title: "Events",
     description: "Planning, coordination, setup, management"
+  },
+  {
+    icon: Fingerprint,
+    title: "Custom",
+    description: "Special requests and unique tasks"
   }
 ];
 
