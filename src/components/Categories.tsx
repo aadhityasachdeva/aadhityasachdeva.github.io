@@ -1,45 +1,65 @@
-import { BookOpen, Palette, Dumbbell, Calendar, Speaker, FileText, Camera, MoreHorizontal } from 'lucide-react';
+import { BookOpen, Briefcase, GraduationCap, Computer, Video, Palette, Dumbbell, Truck, ArrowRightLeft, Heart, Calendar, Settings } from 'lucide-react';
 
 const categories = [
   {
     icon: BookOpen,
-    title: "Assignments & Academic Work",
-    description: "Research, writing, presentations"
+    title: "Homework and Assignments",
+    description: "Research, writing, academic projects"
+  },
+  {
+    icon: Briefcase,
+    title: "Office Work",
+    description: "Data entry, documentation, admin tasks"
+  },
+  {
+    icon: GraduationCap,
+    title: "Tutoring",
+    description: "Subject teaching, exam prep, study sessions"
+  },
+  {
+    icon: Computer,
+    title: "Computer IT",
+    description: "Tech support, coding, web development"
+  },
+  {
+    icon: Video,
+    title: "Video Editing",
+    description: "Content creation, post-production, effects"
   },
   {
     icon: Palette,
-    title: "Design & Creative Tasks",
-    description: "Graphics, logos, creative projects"
+    title: "Design",
+    description: "Graphics, logos, UI/UX, creative work"
   },
   {
     icon: Dumbbell,
-    title: "Fitness & Health",
-    description: "Gym assistance for newbies and workout partners"
+    title: "Fitness",
+    description: "Gym buddies, workout plans, sports"
+  },
+  {
+    icon: Truck,
+    title: "Lift-Move-Pack",
+    description: "Moving assistance, heavy lifting, packing"
+  },
+  {
+    icon: ArrowRightLeft,
+    title: "Borrow-Lend",
+    description: "Equipment, books, tools, electronics"
+  },
+  {
+    icon: Heart,
+    title: "Pet Care",
+    description: "Pet sitting, walking, grooming, care"
   },
   {
     icon: Calendar,
-    title: "Event Support",
-    description: "Planning, coordination, setup"
+    title: "Events",
+    description: "Planning, coordination, setup, management"
   },
   {
-    icon: Speaker,
-    title: "Borrowing/Lending",
-    description: "Speakers, lights, lab coats, books"
-  },
-  {
-    icon: FileText,
-    title: "MS Office / Presentations",
-    description: "PPTs, Excel, document formatting"
-  },
-  {
-    icon: Camera,
-    title: "Photography / Videography",
-    description: "Events, portraits, content creation"
-  },
-  {
-    icon: MoreHorizontal,
-    title: "...and more",
-    description: "More categories and custom listing"
+    icon: Settings,
+    title: "Custom",
+    description: "Special requests and unique tasks"
   }
 ];
 
@@ -57,22 +77,22 @@ const Categories = () => {
         </div>
 
 
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {categories.map((category, index) => {
               const Icon = category.icon;
               
               return (
                 <div
                   key={index}
-                  className="group p-6 bg-card border border-border rounded-xl hover:border-primary/50 hover:shadow-glow transition-all duration-300 transform hover:-translate-y-2 hover:scale-105 animate-fade-in"
+                  className="group p-6 bg-card border border-border rounded-xl hover:border-primary/50 hover:shadow-glow transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 animate-fade-in hover:rotate-1"
                   style={{
-                    animationDelay: `${index * 100}ms`
+                    animationDelay: `${index * 150}ms`
                   }}
                 >
                   <div className="text-center">
-                    <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/30 transition-colors">
-                      <Icon className="w-6 h-6 text-primary" />
+                    <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/30 transition-all duration-300 group-hover:scale-110 group-hover:rotate-12">
+                      <Icon className="w-6 h-6 text-primary group-hover:scale-125 transition-transform duration-300" />
                     </div>
                     
                     <h3 className="font-semibold font-poppins mb-2 text-foreground group-hover:text-primary transition-colors">

@@ -1,4 +1,4 @@
-import { ArrowLeft, Instagram, Linkedin } from 'lucide-react';
+import { ArrowLeft, Instagram, Linkedin, Rocket, Target, Zap, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -99,7 +99,7 @@ const About = () => {
                 <div className="relative group">
                   <div className="bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20 rounded-2xl p-6 h-full hover:shadow-lg hover:shadow-primary/10 transition-all duration-300">
                     <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/30 transition-colors">
-                      <div className="w-6 h-6 bg-primary rounded-full"></div>
+                      <Rocket className="w-6 h-6 text-primary" />
                     </div>
                     <h3 className="text-lg font-bold font-poppins mb-3 text-primary">MVP v1 Launch</h3>
                     <p className="text-sm text-muted-foreground mb-2 font-medium">May 2025</p>
@@ -111,7 +111,7 @@ const About = () => {
                 <div className="relative group">
                   <div className="bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20 rounded-2xl p-6 h-full hover:shadow-lg hover:shadow-primary/10 transition-all duration-300">
                     <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/30 transition-colors">
-                      <div className="w-6 h-6 bg-primary rounded-full"></div>
+                      <Target className="w-6 h-6 text-primary" />
                     </div>
                     <h3 className="text-lg font-bold font-poppins mb-3 text-primary">100+ Tasks Posted</h3>
                     <p className="text-sm text-muted-foreground mb-2 font-medium">Real Impact</p>
@@ -123,7 +123,7 @@ const About = () => {
                 <div className="relative group">
                   <div className="bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20 rounded-2xl p-6 h-full hover:shadow-lg hover:shadow-primary/10 transition-all duration-300">
                     <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/30 transition-colors">
-                      <div className="w-6 h-6 bg-primary rounded-full"></div>
+                      <Zap className="w-6 h-6 text-primary" />
                     </div>
                     <h3 className="text-lg font-bold font-poppins mb-3 text-primary">MVP v2 Live</h3>
                     <p className="text-sm text-muted-foreground mb-2 font-medium">User-Driven</p>
@@ -135,7 +135,7 @@ const About = () => {
                 <div className="relative group">
                   <div className="bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20 rounded-2xl p-6 h-full hover:shadow-lg hover:shadow-primary/10 transition-all duration-300">
                     <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/30 transition-colors">
-                      <div className="w-6 h-6 bg-primary rounded-full"></div>
+                      <MapPin className="w-6 h-6 text-primary" />
                     </div>
                     <h3 className="text-lg font-bold font-poppins mb-3 text-primary">Testing Phase</h3>
                     <p className="text-sm text-muted-foreground mb-2 font-medium">Select Cities</p>
