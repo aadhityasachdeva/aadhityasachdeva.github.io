@@ -40,7 +40,7 @@ const BetaAccess = () => {
                     <img 
                       src="/lovable-uploads/31b6046b-2bd4-4cb4-b4a9-0367c99aa8aa.png" 
                       alt="Askit mobile app interface showing location-based services" 
-                      className="w-96 md:w-[500px] h-auto drop-shadow-2xl"
+                      className="w-[520px] h-auto drop-shadow-2xl"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent rounded-3xl"></div>
                   </div>
