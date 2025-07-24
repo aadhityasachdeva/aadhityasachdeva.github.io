@@ -20,7 +20,7 @@ const BetaTesting = () => {
           <Button 
             size="lg" 
             className="bg-primary hover:bg-primary/80 text-primary-foreground font-semibold px-8 py-4 text-lg group animate-glow-pulse"
-            onClick={() => window.open('https://forms.gle/dhikUeKMqKN2ytoS9', '_blank')}
+            onClick={() => window.location.href = '/beta-access'}
           >
             Sign Up for Beta Access
             <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
