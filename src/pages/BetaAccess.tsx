@@ -121,6 +121,12 @@ const BetaAccess = () => {
                       Get Beta Access
                     </Button>
                   </div>
+                  <p className="text-xs text-muted-foreground mt-4 text-center">
+                    By joining the platform, you agree with our{" "}
+                    <span className="text-primary hover:underline cursor-pointer">Terms of Use</span>
+                    {" "}and{" "}
+                    <span className="text-primary hover:underline cursor-pointer">Privacy Policy</span>
+                  </p>
                 </form>
               </div>
 
