@@ -57,14 +57,14 @@ const categories = [
     description: "Pet sitting, walking, grooming, care"
   },
   {
-    icon: Calendar,
-    title: "Events",
-    description: "Planning, coordination, setup, management"
-  },
-  {
     icon: Fingerprint,
     title: "Custom",
     description: "Special requests and unique tasks"
+  },
+  {
+    icon: Calendar,
+    title: "Events",
+    description: "Planning, coordination, setup, management"
   }
 ];
 
@@ -83,7 +83,7 @@ const Categories = () => {
 
 
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 [&>*:last-child]:xl:col-start-2 [&>*:last-child]:xl:col-span-2 [&>*:last-child]:xl:mx-auto [&>*:last-child]:xl:max-w-sm">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {categories.map((category, index) => {
               const Icon = category.icon;
               
