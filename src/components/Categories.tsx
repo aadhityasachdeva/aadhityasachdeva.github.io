@@ -1,4 +1,4 @@
-import { BookOpen, Briefcase, GraduationCap, Computer, Video, Palette, Dumbbell, Truck, ArrowRightLeft, Heart, Calendar, Settings } from 'lucide-react';
+import { BookOpen, Briefcase, GraduationCap, Computer, Video, Camera, Palette, Dumbbell, Truck, ArrowRightLeft, Heart, Calendar, Settings } from 'lucide-react';
 
 const categories = [
   {
@@ -25,6 +25,11 @@ const categories = [
     icon: Video,
     title: "Video Editing",
     description: "Content creation, post-production, effects"
+  },
+  {
+    icon: Camera,
+    title: "Photography-Filmmaking",
+    description: "Photo shoots, event coverage, film projects"
   },
   {
     icon: Palette,
