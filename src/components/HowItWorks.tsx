@@ -60,7 +60,7 @@ const HowItWorks = () => {
             How <span className="text-primary">Askit</span> Works
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Simple steps to connect, collaborate, and earn within your student community
+            Simple steps to connect, collaborate, and outsource work within your student community
           </p>
         </div>
 

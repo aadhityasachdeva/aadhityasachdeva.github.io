@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
-import { DollarSign, Users, Smartphone, Clock } from 'lucide-react';
+import { IndianRupee, Users, Smartphone, Clock } from 'lucide-react';
 
 const features = [
   {
-    icon: DollarSign,
+    icon: IndianRupee,
     title: "Earn While You Learn",
     description: "Use your skills to make money with flexible hours that fit your schedule"
   },
