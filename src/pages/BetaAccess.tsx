@@ -36,7 +36,7 @@ const BetaAccess = () => {
     // Redirect to the main platform
     setTimeout(() => {
       window.open('https://askit-zeta.vercel.app/', '_blank');
-    }, 1500);
+    }, 3000);
   };
 
   return (
