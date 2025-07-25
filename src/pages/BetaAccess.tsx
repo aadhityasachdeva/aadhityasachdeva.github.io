@@ -28,10 +28,15 @@ const BetaAccess = () => {
 
     toast({
       title: "Welcome to Askit Beta!",
-      description: "You now have beta access to our platform. Start exploring!",
+      description: "Redirecting you to the platform...",
     });
 
     setEmail('');
+    
+    // Redirect to the main platform
+    setTimeout(() => {
+      window.open('https://askit-zeta.vercel.app/', '_blank');
+    }, 1500);
   };
 
   return (
