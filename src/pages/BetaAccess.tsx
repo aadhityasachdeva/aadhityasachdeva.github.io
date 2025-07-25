@@ -125,7 +125,7 @@ const BetaAccess = () => {
                     By joining the platform, you agree with our{" "}
                     <span className="text-primary hover:underline cursor-pointer">Terms of Use</span>
                     {" "}and{" "}
-                    <span className="text-primary hover:underline cursor-pointer">Privacy Policy</span>
+                    <a href="/privacy-policy" className="text-primary hover:underline">Privacy Policy</a>
                   </p>
                 </form>
               </div>

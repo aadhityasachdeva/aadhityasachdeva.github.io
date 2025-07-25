@@ -73,6 +73,14 @@ const Footer = () => {
                     FAQ
                   </button>
                 </li>
+                <li>
+                  <a 
+                    href="/privacy-policy"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    Privacy Policy
+                  </a>
+                </li>
               </ul>
             </div>
 
