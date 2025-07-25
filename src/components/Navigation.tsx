@@ -27,11 +27,13 @@ const Navigation = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <img 
-              src="/lovable-uploads/532310be-40cb-43df-93cd-8ed39d0d5a3c.png" 
-              alt="Askit India Logo" 
-              className="h-8 w-auto"
-            />
+            <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+              <img 
+                src="/lovable-uploads/532310be-40cb-43df-93cd-8ed39d0d5a3c.png" 
+                alt="Askit India Logo" 
+                className="h-8 w-auto cursor-pointer hover:opacity-80 transition-opacity duration-300"
+              />
+            </Link>
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
