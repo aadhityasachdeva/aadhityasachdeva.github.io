@@ -28,7 +28,7 @@ const BetaAccess = () => {
 
     toast({
       title: "Welcome to Askit Beta!",
-      description: "Redirecting you to the platform...",
+      description: "Redirecting you to the platform... Don't forget to add Askit to your homescreen for quick access!",
     });
 
     setEmail('');
