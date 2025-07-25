@@ -123,7 +123,7 @@ const BetaAccess = () => {
                   </div>
                   <p className="text-xs text-muted-foreground mt-4 text-center">
                     By joining the platform, you agree with our{" "}
-                    <span className="text-primary hover:underline cursor-pointer">Terms of Use</span>
+                    <a href="/terms-of-use" className="text-primary hover:underline">Terms of Use</a>
                     {" "}and{" "}
                     <a href="/privacy-policy" className="text-primary hover:underline">Privacy Policy</a>
                   </p>
