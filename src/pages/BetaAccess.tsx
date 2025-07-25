@@ -5,14 +5,13 @@ import { Mail, Instagram, Linkedin, Rocket, CheckCircle, Target, Award, ArrowRig
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { useToast } from '@/hooks/use-toast';
-import emailjs from '@emailjs/browser';
 
 const BetaAccess = () => {
   const [email, setEmail] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
+  
   const { toast } = useToast();
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
     if (!email) {
@@ -24,38 +23,15 @@ const BetaAccess = () => {
       return;
     }
 
-    setIsLoading(true);
+    // Store email (for documentation)
+    console.log('Beta access requested by:', email);
 
-    try {
-      // Send email using EmailJS
-      const templateParams = {
-        user_email: email,
-        to_email: 'askit.socials@gmail.com',
-        subject: 'New Beta Access Request',
-        message: `A new user has requested beta access with email: ${email}`,
-      };
+    toast({
+      title: "Welcome to Askit Beta!",
+      description: "You now have beta access to our platform. Start exploring!",
+    });
 
-      // Note: You'll need to set up EmailJS service and template IDs
-      // For now, we'll use a mailto link as fallback
-      const mailtoLink = `mailto:askit.socials@gmail.com?subject=New Beta Access Request&body=A new user has requested beta access with email: ${email}`;
-      window.open(mailtoLink, '_blank');
-
-      toast({
-        title: "Success!",
-        description: "Your beta access request has been sent. We'll get back to you soon!",
-      });
-
-      setEmail('');
-    } catch (error) {
-      console.error('Error sending email:', error);
-      toast({
-        title: "Error",
-        description: "Failed to send request. Please try again or contact us directly.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsLoading(false);
-    }
+    setEmail('');
   };
 
   return (
@@ -160,8 +136,8 @@ const BetaAccess = () => {
                       required
                       className="flex-1"
                     />
-                    <Button type="submit" disabled={isLoading} className="bg-primary hover:bg-primary/80">
-                      {isLoading ? 'Sending...' : 'Get Beta Access'}
+                    <Button type="submit" className="bg-primary hover:bg-primary/80">
+                      Get Beta Access
                     </Button>
                   </div>
                   <p className="text-xs text-muted-foreground mt-4 text-center">
