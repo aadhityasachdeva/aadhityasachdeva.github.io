@@ -1,9 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-
 const Safety = () => {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Navigation />
       
       <div className="container mx-auto px-4 py-16">
@@ -57,7 +55,7 @@ const Safety = () => {
                 
                 <div className="flex items-start space-x-3">
                   <span className="text-primary font-bold">9.</span>
-                  <p className="text-foreground">Don't do anything illegal or suspicious — we'll know, and it won't end well.</p>
+                  <p className="text-foreground">Don't do anything illegal or suspicious  we'll know, and it won't end well.</p>
                 </div>
                 
                 <div className="flex items-start space-x-3">
@@ -71,8 +69,6 @@ const Safety = () => {
       </div>
       
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Safety;
