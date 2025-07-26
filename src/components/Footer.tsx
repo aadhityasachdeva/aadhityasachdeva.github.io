@@ -89,6 +89,14 @@ const Footer = () => {
                     Terms of Use
                   </a>
                 </li>
+                <li>
+                  <a 
+                    href="/safety"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    Safety
+                  </a>
+                </li>
               </ul>
             </div>
 
