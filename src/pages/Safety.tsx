@@ -6,9 +6,7 @@ const Safety = () => {
       
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold font-poppins mb-8 text-center">
-            🔐 Askit Safety Guidelines (MVP Edition)
-          </h1>
+          <h1 className="text-4xl font-bold font-poppins mb-8 text-center"> Askit Safety Guidelines (MVP Edition)</h1>
           
           <div className="bg-card border border-border rounded-lg p-8">
             <div className="space-y-6">
