@@ -22,7 +22,7 @@ const Safety = () => {
                 
                 <div className="flex items-start space-x-3">
                   <span className="text-primary font-bold">2.</span>
-                  <p className="text-foreground">Communicate only via the Askit platform — no DMs, no calls, no "just WhatsApp me."</p>
+                  <p className="text-foreground">Communicate only via the Askit platform. No DMs, no calls, no "just WhatsApp me."</p>
                 </div>
                 
                 <div className="flex items-start space-x-3">
@@ -42,7 +42,7 @@ const Safety = () => {
                 
                 <div className="flex items-start space-x-3">
                   <span className="text-primary font-bold">6.</span>
-                  <p className="text-foreground">Do not send or accept cash or off-platform payments — even if it seems convenient.</p>
+                  <p className="text-foreground">Do not send or accept cash or off-platform payments, even if it seems convenient.</p>
                 </div>
                 
                 <div className="flex items-start space-x-3">
