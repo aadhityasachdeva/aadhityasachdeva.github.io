@@ -76,6 +76,40 @@ const BetaAccess = () => {
                 </p>
               </div>
 
+              {/* Email Signup */}
+              <div className="bg-card border border-border rounded-2xl p-8 mb-16">
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold font-poppins mb-4">
+                    🔓 Get Early Access
+                  </h3>
+                  <p className="text-muted-foreground">
+                    Enter your email below and get access to the platform
+                  </p>
+                </div>
+
+                <form onSubmit={handleSubmit} className="max-w-md mx-auto">
+                  <div className="flex gap-4">
+                    <Input
+                      type="email"
+                      placeholder="Enter your email address"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
+                      className="flex-1"
+                    />
+                    <Button type="submit" className="bg-primary hover:bg-primary/80">
+                      Get Beta Access
+                    </Button>
+                  </div>
+                  <p className="text-xs text-muted-foreground mt-4 text-center">
+                    By joining the platform, you agree with our{" "}
+                    <a href="/terms-of-use" className="text-primary hover:underline">Terms of Use</a>
+                    {" "}and{" "}
+                    <a href="/privacy-policy" className="text-primary hover:underline">Privacy Policy</a>
+                  </p>
+                </form>
+              </div>
+
               {/* Benefits */}
               <div className="mb-16">
                 <h3 className="text-2xl font-bold font-poppins mb-8 text-center">
@@ -118,40 +152,6 @@ const BetaAccess = () => {
                   Whether you need help with everyday tasks or simply want to explore how Askit works, 
                   this is your chance to be part of something built for students, by students.
                 </p>
-              </div>
-
-              {/* Email Signup */}
-              <div className="bg-card border border-border rounded-2xl p-8 mb-16">
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold font-poppins mb-4">
-                    🔓 Get Early Access
-                  </h3>
-                  <p className="text-muted-foreground">
-                    Enter your email below and get access to the platform
-                  </p>
-                </div>
-
-                <form onSubmit={handleSubmit} className="max-w-md mx-auto">
-                  <div className="flex gap-4">
-                    <Input
-                      type="email"
-                      placeholder="Enter your email address"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      required
-                      className="flex-1"
-                    />
-                    <Button type="submit" className="bg-primary hover:bg-primary/80">
-                      Get Beta Access
-                    </Button>
-                  </div>
-                  <p className="text-xs text-muted-foreground mt-4 text-center">
-                    By joining the platform, you agree with our{" "}
-                    <a href="/terms-of-use" className="text-primary hover:underline">Terms of Use</a>
-                    {" "}and{" "}
-                    <a href="/privacy-policy" className="text-primary hover:underline">Privacy Policy</a>
-                  </p>
-                </form>
               </div>
 
               {/* Service Provider Section */}
