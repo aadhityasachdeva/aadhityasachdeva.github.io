@@ -35,7 +35,7 @@ const BetaAccess = () => {
     
     // Redirect to the main platform
     setTimeout(() => {
-      window.open('https://askit-1.onrender.com/gettingStarted', '_blank');
+      window.open('https://askit-1.onrender.com/app/', '_blank');
     }, 3000);
   };
 
