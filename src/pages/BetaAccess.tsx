@@ -5,13 +5,15 @@ import { Mail, Instagram, Linkedin, Rocket, CheckCircle, Target, Award, ArrowRig
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { useToast } from '@/hooks/use-toast';
+import { supabase } from '@/integrations/supabase/client';
 
 const BetaAccess = () => {
   const [email, setEmail] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
   
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     if (!email) {
@@ -23,20 +25,48 @@ const BetaAccess = () => {
       return;
     }
 
-    // Store email (for documentation)
-    console.log('Beta access requested by:', email);
+    setIsLoading(true);
 
-    toast({
-      title: "Welcome to Askit Beta!",
-      description: "Redirecting you to the platform... Don't forget to add Askit to your homescreen for quick access!",
-    });
+    try {
+      // Save email to Supabase
+      const { error } = await supabase
+        .from('beta_signups')
+        .insert([{ email }]);
 
-    setEmail('');
-    
-    // Redirect to the main platform
-    setTimeout(() => {
-      window.open('https://askit-1.onrender.com/app/', '_blank');
-    }, 3000);
+      if (error) {
+        // Check if it's a duplicate email error
+        if (error.code === '23505') {
+          toast({
+            title: "Already Registered!",
+            description: "You're already signed up for beta access. Redirecting you to the platform...",
+          });
+        } else {
+          throw error;
+        }
+      } else {
+        toast({
+          title: "Welcome to Askit Beta!",
+          description: "Redirecting you to the platform... Don't forget to add Askit to your homescreen for quick access!",
+        });
+      }
+
+      setEmail('');
+      
+      // Redirect to the main platform
+      setTimeout(() => {
+        window.open('https://askit-1.onrender.com/app/', '_blank');
+      }, 3000);
+
+    } catch (error) {
+      console.error('Error saving beta signup:', error);
+      toast({
+        title: "Error",
+        description: "Failed to save your email. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -97,8 +127,8 @@ const BetaAccess = () => {
                       required
                       className="flex-1"
                     />
-                    <Button type="submit" className="bg-primary hover:bg-primary/80">
-                      Get Beta Access
+                    <Button type="submit" disabled={isLoading} className="bg-primary hover:bg-primary/80">
+                      {isLoading ? 'Saving...' : 'Get Beta Access'}
                     </Button>
                   </div>
                   <p className="text-xs text-muted-foreground mt-4 text-center">
