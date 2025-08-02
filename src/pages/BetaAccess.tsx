@@ -80,7 +80,7 @@ const BetaAccess = () => {
               <div className="bg-card border border-border rounded-2xl p-8 mb-16">
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold font-poppins mb-4">
-                    🔓 Get Early Access
+                    Get Access Now
                   </h3>
                   <p className="text-muted-foreground">
                     Enter your email below and get access to the platform
