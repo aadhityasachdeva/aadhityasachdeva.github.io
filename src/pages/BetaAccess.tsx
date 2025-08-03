@@ -37,16 +37,16 @@ const BetaAccess = () => {
         // Check if it's a duplicate email error
         if (error.code === '23505') {
           toast({
-            title: "Already Registered!",
-            description: "You're already signed up for beta access. Redirecting you to the platform...",
+            title: "Please wait",
+            description: "We are redirecting you...",
           });
         } else {
           throw error;
         }
       } else {
         toast({
-          title: "Welcome to Askit Beta!",
-          description: "Redirecting you to the platform... Don't forget to add Askit to your homescreen for quick access!",
+          title: "Please wait",
+          description: "We are redirecting you...",
         });
       }
 
@@ -54,8 +54,8 @@ const BetaAccess = () => {
       
       // Redirect to the main platform
       setTimeout(() => {
-        window.open('https://askit-1.onrender.com/app/', '_blank');
-      }, 3000);
+        window.open('https://askit-1.onrender.com/app/gettingStarted', '_blank');
+      }, 1000);
 
     } catch (error) {
       console.error('Error saving beta signup:', error);
