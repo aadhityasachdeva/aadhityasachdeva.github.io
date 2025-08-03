@@ -35,27 +35,15 @@ const BetaAccess = () => {
 
       if (error) {
         // Check if it's a duplicate email error
-        if (error.code === '23505') {
-          toast({
-            title: "Please wait",
-            description: "We are redirecting you...",
-          });
-        } else {
+        if (error.code !== '23505') {
           throw error;
         }
-      } else {
-        toast({
-          title: "Please wait",
-          description: "We are redirecting you...",
-        });
       }
 
       setEmail('');
       
-      // Redirect to the main platform
-      setTimeout(() => {
-        window.open('https://askit-1.onrender.com/app/gettingStarted', '_blank');
-      }, 1000);
+      // Redirect to the main platform immediately
+      window.open('https://askit-1.onrender.com/app/gettingStarted', '_blank');
 
     } catch (error) {
       console.error('Error saving beta signup:', error);
