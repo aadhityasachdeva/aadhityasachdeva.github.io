@@ -155,7 +155,7 @@ const About = () => {
               {/* Aryan Vaid */}
               <div className="bg-card border border-border rounded-xl p-8 text-center">
                 <img 
-                  src="/lovable-uploads/98044be0-7dee-47df-826d-1e16088c46a8.png" 
+                  src="/lovable-uploads/64289615-7f23-4bd3-9a28-9e4911dee6f0.png" 
                   alt="Aryan Vaid" 
                   className="w-24 h-24 rounded-full object-cover mx-auto mb-6"
                 />
