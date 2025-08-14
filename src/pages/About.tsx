@@ -157,7 +157,7 @@ const About = () => {
                 <img 
                   src="/lovable-uploads/64289615-7f23-4bd3-9a28-9e4911dee6f0.png" 
                   alt="Aryan Vaid" 
-                  className="w-24 h-24 rounded-full object-cover mx-auto mb-6"
+                  className="w-32 h-32 rounded-full object-cover mx-auto mb-6"
                 />
                 <h3 className="text-xl font-bold font-poppins mb-2">Aryan Vaid</h3>
                 <p className="text-primary font-semibold mb-4">The Co-founder</p>
