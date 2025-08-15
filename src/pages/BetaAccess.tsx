@@ -43,7 +43,7 @@ const BetaAccess = () => {
       setEmail('');
       
       // Redirect to the main platform immediately
-      window.open('https://askit-1.onrender.com/app/gettingStarted', '_blank');
+      window.open('https://askitindia.com/app', '_blank');
 
     } catch (error) {
       console.error('Error saving beta signup:', error);
