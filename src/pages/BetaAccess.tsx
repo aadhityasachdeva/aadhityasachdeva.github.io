@@ -181,10 +181,10 @@ const BetaAccess = () => {
                 <p className="text-muted-foreground mb-6">
                   Reach out to us at{' '}
                   <a 
-                    href="mailto:askit.socials@gmail.com" 
+                    href="mailto:support@askitindia.com" 
                     className="text-primary hover:underline font-semibold"
                   >
-                    askit.socials@gmail.com
+                    support@askitindia.com
                   </a>
                 </p>
                 <p className="text-muted-foreground mb-6">
@@ -209,7 +209,7 @@ const BetaAccess = () => {
                     <Linkedin className="w-6 h-6 text-primary" />
                   </a>
                   <a 
-                    href="mailto:askit.socials@gmail.com"
+                    href="mailto:support@askitindia.com"
                     className="w-12 h-12 bg-primary/10 border border-primary/20 rounded-lg flex items-center justify-center hover:bg-primary/20 transition-colors group"
                   >
                     <Mail className="w-6 h-6 text-primary" />
