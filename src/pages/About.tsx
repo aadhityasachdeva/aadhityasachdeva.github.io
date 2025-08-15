@@ -187,9 +187,9 @@ const About = () => {
               {/* Aadhitya Sachdeva */}
               <div className="bg-card border border-border rounded-xl p-8 text-center">
                 <img 
-                  src="/lovable-uploads/d5ea9db7-a032-4f9f-bd1d-59a01d0994fb.png" 
+                  src="/lovable-uploads/a7a82bd0-b189-4fcd-9f30-ff9a9824d45d.png" 
                   alt="Aadhitya Sachdeva" 
-                  className="w-24 h-24 rounded-full object-cover mx-auto mb-6"
+                  className="w-32 h-32 rounded-full object-cover mx-auto mb-6"
                 />
                 <h3 className="text-xl font-bold font-poppins mb-2">Aadhitya Sachdeva</h3>
                 <p className="text-primary font-semibold mb-4">The Co-founder</p>
