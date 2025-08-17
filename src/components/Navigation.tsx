@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import ThemeToggle from '@/components/ThemeToggle';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -61,6 +62,7 @@ const Navigation = () => {
             >
               Contact
             </button>
+            <ThemeToggle />
           </div>
         </div>
       </div>
