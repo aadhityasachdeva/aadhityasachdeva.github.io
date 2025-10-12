@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { ScrollArea } from '@/components/ui/scroll-area';
-import { Bot } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import remiBotIcon from '@/assets/remi-bot-icon.png';
 
 interface Message {
   type: 'bot' | 'user';
@@ -149,7 +149,7 @@ const ChatbotDialog = ({ isOpen, onClose }: ChatbotDialogProps) => {
       <DialogContent className="max-w-lg h-[600px] flex flex-col p-0">
         <DialogHeader className="px-6 py-4 border-b">
           <DialogTitle className="flex items-center gap-2">
-            <Bot className="h-5 w-5" />
+            <img src={remiBotIcon} alt="Remi" className="h-8 w-8 rounded-full" />
             Remi - Your Askit Assistant
           </DialogTitle>
         </DialogHeader>
