@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { ScrollArea } from '@/components/ui/scroll-area';
@@ -18,6 +18,7 @@ interface ChatbotDialogProps {
 
 const ChatbotDialog = ({ isOpen, onClose }: ChatbotDialogProps) => {
   const navigate = useNavigate();
+  const messagesEndRef = useRef<HTMLDivElement>(null);
   const [messages, setMessages] = useState<Message[]>([
     {
       type: 'bot',
@@ -26,6 +27,14 @@ const ChatbotDialog = ({ isOpen, onClose }: ChatbotDialogProps) => {
     }
   ]);
   const [conversationState, setConversationState] = useState<string>('greeting');
+
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages]);
 
   const handleOptionClick = (option: string) => {
     // Add user message
@@ -182,6 +191,7 @@ const ChatbotDialog = ({ isOpen, onClose }: ChatbotDialogProps) => {
                 </div>
               </div>
             ))}
+            <div ref={messagesEndRef} />
           </div>
         </ScrollArea>
 
