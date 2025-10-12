@@ -88,9 +88,9 @@ const BetaAccess = () => {
                   Be Among the First to Experience Askit
                 </h2>
                 <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                  We're building a platform where students help students by completing real tasks using real skills. 
+                  We're building India's premier student freelance platform where college students help each other by completing real tasks using real skills. 
                   Now, we're opening our doors to a limited number of <span className="text-primary font-semibold">early users</span> to 
-                  test the beta version of Askit.
+                  test the beta version - earn money as a student or hire student freelancers for your tasks.
                 </p>
               </div>
 
