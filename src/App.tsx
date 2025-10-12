@@ -10,6 +10,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfUse from "./pages/TermsOfUse";
 import Safety from "./pages/Safety";
 import NotFound from "./pages/NotFound";
+import ChatbotButton from "./components/ChatbotButton";
 
 const queryClient = new QueryClient();
 
@@ -18,6 +19,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
+      <ChatbotButton />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
