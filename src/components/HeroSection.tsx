@@ -28,7 +28,7 @@ const HeroSection = () => {
             {/* Left side - Text content */}
             <div className="text-left lg:pr-8 animate-fade-in-up">
               <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
-                The peer-to-peer service marketplace designed exclusively for college students. 
+                The service marketplace designed exclusively for college students. 
                 <span className="text-primary font-semibold"> Your skills. Your convenience.
 Your earnings.</span>
               </p>

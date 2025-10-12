@@ -20,7 +20,7 @@ const Footer = () => {
                 <span className="text-primary"> India</span>
               </div>
               <p className="text-muted-foreground mb-6 max-w-md">
-                The peer-to-peer service marketplace designed exclusively for college students. 
+                The service marketplace designed exclusively for college students. 
                 Your skills. Your campus. Your earnings.
               </p>
               
