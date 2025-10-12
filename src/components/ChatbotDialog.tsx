@@ -21,7 +21,7 @@ const ChatbotDialog = ({ isOpen, onClose }: ChatbotDialogProps) => {
   const [messages, setMessages] = useState<Message[]>([
     {
       type: 'bot',
-      text: "Hey there! 👋 I'm Aski, your friendly assistant from Askit India.\nWould you like to know how Askit works or need help getting started?",
+      text: "Hey there! 👋 I'm Remi, your friendly assistant from Askit India.\nWould you like to know how Askit works or need help getting started?",
       options: ['What is Askit?', 'How does it work?', 'Join the beta version', 'Talk to the team']
     }
   ]);
@@ -98,7 +98,7 @@ const ChatbotDialog = ({ isOpen, onClose }: ChatbotDialogProps) => {
       } else if (option === 'Go back') {
         setMessages([{
           type: 'bot',
-          text: "Hey there! 👋 I'm Aski, your friendly assistant from Askit India.\nWould you like to know how Askit works or need help getting started?",
+          text: "Hey there! 👋 I'm Remi, your friendly assistant from Askit India.\nWould you like to know how Askit works or need help getting started?",
           options: ['What is Askit?', 'How does it work?', 'Join the beta version', 'Talk to the team']
         }]);
         setConversationState('greeting');
@@ -150,7 +150,7 @@ const ChatbotDialog = ({ isOpen, onClose }: ChatbotDialogProps) => {
         <DialogHeader className="px-6 py-4 border-b">
           <DialogTitle className="flex items-center gap-2">
             <Bot className="h-5 w-5" />
-            Aski - Your Askit Assistant
+            Remi - Your Askit Assistant
           </DialogTitle>
         </DialogHeader>
         
