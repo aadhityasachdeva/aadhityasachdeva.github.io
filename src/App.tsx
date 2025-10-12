@@ -19,8 +19,8 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <ChatbotButton />
       <BrowserRouter>
+        <ChatbotButton />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
