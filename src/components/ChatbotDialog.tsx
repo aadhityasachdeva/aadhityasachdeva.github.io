@@ -23,7 +23,7 @@ const ChatbotDialog = ({ isOpen, onClose }: ChatbotDialogProps) => {
     {
       type: 'bot',
       text: "Hey there! 👋 I'm Remi, your friendly assistant from Askit India.\nWould you like to know how Askit works or need help getting started?",
-      options: ['What is Askit?', 'How does it work?', 'Join the beta version', 'Talk to the team']
+      options: ['What is Askit?', 'How does it work?', 'MSME Services', 'Join the beta version', 'Talk to the team']
     }
   ]);
   const [conversationState, setConversationState] = useState<string>('greeting');
@@ -108,12 +108,57 @@ const ChatbotDialog = ({ isOpen, onClose }: ChatbotDialogProps) => {
         setMessages([{
           type: 'bot',
           text: "Hey there! 👋 I'm Remi, your friendly assistant from Askit India.\nWould you like to know how Askit works or need help getting started?",
-          options: ['What is Askit?', 'How does it work?', 'Join the beta version', 'Talk to the team']
+          options: ['What is Askit?', 'How does it work?', 'MSME Services', 'Join the beta version', 'Talk to the team']
         }]);
         setConversationState('greeting');
       } else if (option === 'Post a task' || option === 'Join as Service Provider') {
         navigate('/beta-access');
         onClose();
+      } else if (option === 'MSME Services') {
+        setMessages(prev => [...prev, {
+          type: 'bot',
+          text: "Great choice! 🚀 Askit offers affordable, skilled student talent for MSMEs and small businesses.\n\nWhat would you like to know about our MSME services?",
+          options: ['What services do you offer?', 'How much does it cost?', 'Why choose Askit over agencies?', 'Get started with MSME services']
+        }]);
+        setConversationState('msme-services');
+      } else if (option === 'What services do you offer?') {
+        setMessages(prev => [...prev, {
+          type: 'bot',
+          text: "We offer a wide range of business support services:\n\n🎨 Creative & Design Support (logos, posts, banners)\n✍️ Content Creation & Copywriting\n📈 Digital Marketing (SEO, social media, ads)\n🔍 Research & Administrative Tasks\n⚡ Flexible & Tailored Packages\n\nAll delivered by skilled students at 30-60% lower costs than agencies!",
+          options: ['How much does it cost?', 'Why choose Askit over agencies?', 'Get started with MSME services', 'Go back']
+        }]);
+        setConversationState('msme-services-details');
+      } else if (option === 'How much does it cost?') {
+        setMessages(prev => [...prev, {
+          type: 'bot',
+          text: "Our pricing is flexible and task-based — you only pay for what you need!\n\n💰 Social Media Management: Flexible pricing vs ₹15,000-₹50,000/month at agencies\n💰 SEO Services: Lower costs vs ₹15,000-₹50,000/month at agencies\n💰 Content Creation: Affordable rates vs ₹2,000-₹10,000/post at agencies\n\nSave 30-60% compared to traditional agencies without compromising quality!",
+          options: ['Why choose Askit over agencies?', 'Get started with MSME services', 'Go back']
+        }]);
+        setConversationState('msme-pricing');
+      } else if (option === 'Why choose Askit over agencies?') {
+        setMessages(prev => [...prev, {
+          type: 'bot',
+          text: "Here's why businesses love Askit:\n\n✅ Cost Efficiency - No agency retainers or overheads\n✅ Flexible Scaling - No long-term commitments\n✅ Faster Turnaround - Agile student teams\n✅ Fresh Creativity - Modern, youth-driven designs\n✅ Transparent Pricing - Clear task-based rates\n✅ Local Focus - Students understand your audience\n\nAgencies charge ₹20,000-₹40,000+ monthly. We deliver similar value at up to 60% lower cost!",
+          options: ['What services do you offer?', 'Get started with MSME services', 'Go back']
+        }]);
+        setConversationState('msme-benefits');
+      } else if (option === 'Get started with MSME services') {
+        setMessages(prev => [...prev, {
+          type: 'bot',
+          text: "Awesome! 🎉 Ready to grow your business without the agency price tag?\n\nYou can:\n1️⃣ Visit our MSME Services page for more details\n2️⃣ Contact our team directly at support@askitindia.com\n\nWhat would you prefer?",
+          options: ['View MSME Services page', 'Contact the team', 'Go back']
+        }]);
+        setConversationState('msme-get-started');
+      } else if (option === 'View MSME Services page') {
+        navigate('/msme-services');
+        onClose();
+      } else if (option === 'Contact the team') {
+        window.location.href = 'mailto:support@askitindia.com';
+        setMessages(prev => [...prev, {
+          type: 'bot',
+          text: "Opening your email app! ✉️\n\nOur team will get back to you shortly with more details about MSME services.\n\nAnything else I can help with?",
+          options: ['Go back']
+        }]);
       }
     }, 500);
   };
@@ -133,13 +178,19 @@ const ChatbotDialog = ({ isOpen, onClose }: ChatbotDialogProps) => {
         answer = "Anything from academic help to design work, video editing, research, or even small college projects.";
       } else if (question.toLowerCase().includes('launch')) {
         answer = "We're currently in testing and improving fast, the full version will roll out soon!";
+      } else if (question.toLowerCase().includes('msme') || question.toLowerCase().includes('business')) {
+        answer = "MSMEs can access skilled student talent for design, marketing, research, and more at 30-60% lower costs than agencies. We offer flexible, task-based pricing with no long-term commitments!";
+      } else if (question.toLowerCase().includes('agencies')) {
+        answer = "Askit offers similar quality at 30-60% lower costs, with faster turnaround, flexible scaling, transparent pricing, and fresh creativity from talented students!";
+      } else if (question.toLowerCase().includes('pricing') || question.toLowerCase().includes('cost')) {
+        answer = "We use flexible, task-based pricing. You only pay for what you need — no retainers, no hidden fees. Typically 30-60% cheaper than agency rates!";
       }
 
       if (answer) {
         setMessages(prev => [...prev, {
           type: 'bot',
           text: answer + "\n\nIs there anything else I can help you with?",
-          options: ['What is Askit?', 'How does it work?', 'Join the beta version', 'Talk to the team']
+          options: ['What is Askit?', 'How does it work?', 'MSME Services', 'Join the beta version', 'Talk to the team']
         }]);
       }
     }, 500);
@@ -150,7 +201,9 @@ const ChatbotDialog = ({ isOpen, onClose }: ChatbotDialogProps) => {
     "Is it free to use?",
     "How do payments work?",
     "What kind of tasks can I post?",
-    "When will the full version launch?"
+    "When will the full version launch?",
+    "MSME services pricing?",
+    "Why Askit vs agencies?"
   ];
 
   return (
