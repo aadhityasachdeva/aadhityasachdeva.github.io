@@ -196,7 +196,7 @@ const MSMEServices = () => {
             <CardContent className="p-8">
               <div className="space-y-6 text-center">
                 <p className="text-2xl font-bold">
-                  Agencies charge ₹20,000–₹1,00,000+ monthly for content and SEO.
+                  Agencies charge ₹20,000–₹40,000+ monthly for Business Development services.
                 </p>
                 <p className="text-3xl font-bold text-primary">
                   Askit delivers similar value at up to 60% lower cost.
