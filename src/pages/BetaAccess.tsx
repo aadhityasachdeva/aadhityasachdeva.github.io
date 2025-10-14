@@ -101,7 +101,7 @@ const BetaAccess = () => {
                     Get Access Now
                   </h3>
                   <p className="text-muted-foreground">
-                    Enter your email below and get access to the platform
+                    Enter your email below and we'll redirect you to the platform
                   </p>
                 </div>
 
