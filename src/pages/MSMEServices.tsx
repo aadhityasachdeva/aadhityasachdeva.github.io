@@ -109,22 +109,40 @@ const MSMEServices = () => {
       </section>
 
       {/* Section 1: What Askit Can Do */}
-      <section className="py-20 px-4 bg-muted/20">
+      <section className="py-24 px-4 bg-gradient-to-b from-background to-muted/30 relative overflow-hidden">
+        {/* Decorative background elements */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-10" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-10" />
+        
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            What Askit Can Do for Your <span className="text-primary">MSME</span>
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">
+              What Askit Can Do for Your <span className="text-primary">Business</span>
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Comprehensive solutions tailored to elevate your business with skilled student talent
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
-                <CardHeader>
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                    <service.icon className="w-6 h-6 text-primary" />
+              <Card 
+                key={index} 
+                className="group hover:shadow-2xl hover:scale-105 transition-all duration-300 border-border/50 hover:border-primary/50 bg-card/80 backdrop-blur-sm animate-fade-in"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <CardHeader className="space-y-4">
+                  <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center group-hover:from-primary/30 group-hover:to-primary/10 transition-all duration-300 group-hover:scale-110">
+                    <service.icon className="w-8 h-8 text-primary group-hover:animate-pulse" />
                   </div>
-                  <CardTitle className="text-xl">{service.title}</CardTitle>
+                  <CardTitle className="text-xl group-hover:text-primary transition-colors duration-300">
+                    {service.title}
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-base">{service.description}</CardDescription>
+                  <CardDescription className="text-base leading-relaxed">
+                    {service.description}
+                  </CardDescription>
                 </CardContent>
               </Card>
             ))}
