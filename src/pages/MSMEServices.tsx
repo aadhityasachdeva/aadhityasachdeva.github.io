@@ -219,6 +219,9 @@ const MSMEServices = () => {
                 <p className="text-3xl font-bold text-primary">
                   Askit delivers similar value at up to 60% lower cost.
                 </p>
+                <p className="text-lg text-muted-foreground">
+                  By hiring freelancers through Askit, you only pay for what you want. You receive quality deliverables that match your expectations — no wasted budget on unnecessary services or long-term commitments.
+                </p>
                 <div className="pt-4 border-t border-border mt-6">
                   <p className="text-sm text-muted-foreground italic">
                     Social proof and testimonials coming soon
