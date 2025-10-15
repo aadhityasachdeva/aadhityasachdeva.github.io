@@ -4,17 +4,20 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 const PricingChart = () => {
   const chartData = [
     {
-      service: 'Social Media Management',
+      service: 'Social Media',
+      fullName: 'Social Media Management',
       'Agency Cost': 32500,
       'Askit Cost': 16000,
     },
     {
-      service: 'Basic SEO Package',
+      service: 'SEO Package',
+      fullName: 'Basic SEO Package',
       'Agency Cost': 32500,
       'Askit Cost': 16000,
     },
     {
-      service: 'Content/Blogs/Copywriting',
+      service: 'Content Writing',
+      fullName: 'Content/Blogs/Copywriting',
       'Agency Cost': 6000,
       'Askit Cost': 3000,
     },
@@ -23,13 +26,21 @@ const PricingChart = () => {
   const CustomTooltip = ({ active, payload }: any) => {
     if (active && payload && payload.length) {
       return (
-        <div className="bg-card border border-border rounded-lg p-4 shadow-lg">
-          <p className="font-semibold mb-2">{payload[0].payload.service}</p>
-          {payload.map((entry: any, index: number) => (
-            <p key={index} style={{ color: entry.color }} className="text-sm">
-              {entry.name}: ₹{entry.value.toLocaleString('en-IN')}
-            </p>
-          ))}
+        <div className="bg-card border-2 border-primary/20 rounded-lg p-4 shadow-xl min-w-[200px]">
+          <p className="font-bold mb-3 text-base leading-tight">{payload[0].payload.fullName}</p>
+          <div className="space-y-1.5">
+            {payload.map((entry: any, index: number) => (
+              <div key={index} className="flex justify-between items-center gap-4">
+                <span className="text-sm font-medium">{entry.name}:</span>
+                <span 
+                  style={{ color: entry.color }} 
+                  className="text-sm font-bold whitespace-nowrap"
+                >
+                  ₹{entry.value.toLocaleString('en-IN')}
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
       );
     }
@@ -37,60 +48,88 @@ const PricingChart = () => {
   };
 
   return (
-    <Card className="border-primary/20 bg-gradient-to-br from-background to-muted/30">
-      <CardHeader>
-        <CardTitle className="text-center text-2xl">
+    <Card className="border-primary/20 bg-gradient-to-br from-background to-muted/30 shadow-lg">
+      <CardHeader className="space-y-3 pb-6">
+        <CardTitle className="text-center text-2xl md:text-3xl leading-tight">
           Industry vs. Askit <span className="text-primary">Pricing Comparison</span>
         </CardTitle>
-        <p className="text-center text-muted-foreground text-sm mt-2">
+        <p className="text-center text-muted-foreground text-sm md:text-base">
           Monthly pricing comparison (in ₹)
         </p>
       </CardHeader>
-      <CardContent>
-        <ResponsiveContainer width="100%" height={400}>
-          <BarChart
-            data={chartData}
-            margin={{ top: 20, right: 30, left: 20, bottom: 60 }}
-          >
-            <CartesianGrid strokeDasharray="3 3" className="stroke-muted" />
-            <XAxis 
-              dataKey="service" 
-              angle={-15}
-              textAnchor="end"
-              height={80}
-              className="text-xs"
-              tick={{ fill: 'hsl(var(--foreground))' }}
-            />
-            <YAxis 
-              tick={{ fill: 'hsl(var(--foreground))' }}
-              label={{ 
-                value: 'Cost (₹)', 
-                angle: -90, 
-                position: 'insideLeft',
-                style: { fill: 'hsl(var(--foreground))' }
-              }}
-            />
-            <Tooltip content={<CustomTooltip />} />
-            <Legend 
-              wrapperStyle={{ paddingTop: '20px' }}
-              iconType="square"
-            />
-            <Bar 
-              dataKey="Agency Cost" 
-              fill="hsl(var(--muted-foreground))" 
-              radius={[8, 8, 0, 0]}
-              name="Agency Cost"
-            />
-            <Bar 
-              dataKey="Askit Cost" 
-              fill="hsl(var(--primary))" 
-              radius={[8, 8, 0, 0]}
-              name="Askit Cost"
-            />
-          </BarChart>
-        </ResponsiveContainer>
-        <div className="mt-6 text-center space-y-2">
-          <p className="text-sm text-muted-foreground">
+      <CardContent className="px-4 md:px-6">
+        <div className="w-full overflow-x-auto">
+          <ResponsiveContainer width="100%" height={450} minWidth={300}>
+            <BarChart
+              data={chartData}
+              margin={{ top: 20, right: 40, left: 60, bottom: 80 }}
+              barGap={8}
+              barCategoryGap="20%"
+            >
+              <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" opacity={0.3} />
+              <XAxis 
+                dataKey="service" 
+                angle={0}
+                textAnchor="middle"
+                height={100}
+                interval={0}
+                tick={{ 
+                  fill: 'hsl(var(--foreground))',
+                  fontSize: 12,
+                  fontWeight: 500
+                }}
+                tickLine={{ stroke: 'hsl(var(--border))' }}
+              />
+              <YAxis 
+                tick={{ 
+                  fill: 'hsl(var(--foreground))',
+                  fontSize: 12
+                }}
+                tickLine={{ stroke: 'hsl(var(--border))' }}
+                axisLine={{ stroke: 'hsl(var(--border))' }}
+                tickFormatter={(value) => `₹${(value / 1000).toFixed(0)}k`}
+                label={{ 
+                  value: 'Monthly Cost (₹)', 
+                  angle: -90, 
+                  position: 'insideLeft',
+                  style: { 
+                    fill: 'hsl(var(--foreground))',
+                    fontSize: 14,
+                    fontWeight: 600
+                  }
+                }}
+              />
+              <Tooltip 
+                content={<CustomTooltip />}
+                cursor={{ fill: 'hsl(var(--primary))', opacity: 0.1 }}
+              />
+              <Legend 
+                wrapperStyle={{ 
+                  paddingTop: '30px',
+                  fontSize: '14px'
+                }}
+                iconType="square"
+                iconSize={16}
+              />
+              <Bar 
+                dataKey="Agency Cost" 
+                fill="hsl(var(--muted-foreground))" 
+                radius={[8, 8, 0, 0]}
+                name="Agency Cost"
+                maxBarSize={80}
+              />
+              <Bar 
+                dataKey="Askit Cost" 
+                fill="hsl(var(--primary))" 
+                radius={[8, 8, 0, 0]}
+                name="Askit Cost"
+                maxBarSize={80}
+              />
+            </BarChart>
+          </ResponsiveContainer>
+        </div>
+        <div className="mt-8 text-center space-y-3 px-2">
+          <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
             Agency pricing varies widely by scope and campaign. Askit connects MSMEs with student talent for <span className="text-primary font-semibold">30–60% lower costs</span> without compromising creativity or quality.
           </p>
           <p className="text-xs text-muted-foreground italic">
