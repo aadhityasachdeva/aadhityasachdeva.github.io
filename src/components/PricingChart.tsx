@@ -135,6 +135,9 @@ const PricingChart = () => {
           <p className="text-xs text-muted-foreground italic">
             * Values shown are approximate monthly averages for comparison
           </p>
+          <p className="text-xs text-muted-foreground italic">
+            * These prices are estimates taken from the internet for viewer's reference
+          </p>
         </div>
       </CardContent>
     </Card>
