@@ -59,7 +59,7 @@ const ChatbotDialog = ({ isOpen, onClose }: ChatbotDialogProps) => {
       } else if (option === 'Join the beta version') {
         setMessages(prev => [...prev, {
           type: 'bot',
-          text: "That's awesome! 🌟\nWe're inviting early users to join the Askit Beta Tribe — get early access and priority task matching.\n\nTo join, just press on Get Beta Access 👇",
+          text: "That's awesome! 🌟\nWe're inviting early users to join the Askit Beta Tribe get early access and priority task matching.\n\nTo join, just press on Get Beta Access 👇",
           options: ['App Access']
         }]);
         setConversationState('join-beta');
@@ -131,7 +131,7 @@ const ChatbotDialog = ({ isOpen, onClose }: ChatbotDialogProps) => {
       } else if (option === 'How much does it cost?') {
         setMessages(prev => [...prev, {
           type: 'bot',
-          text: "Our pricing is flexible and task-based — you only pay for what you need!\n\n💰 Social Media Management: Flexible pricing vs ₹15,000-₹50,000/month at agencies\n💰 SEO Services: Lower costs vs ₹15,000-₹50,000/month at agencies\n💰 Content Creation: Affordable rates vs ₹2,000-₹10,000/post at agencies\n\nSave 30-60% compared to traditional agencies without compromising quality!",
+          text: "Our pricing is flexible and task-based you only pay for what you need!\n\n💰 Social Media Management: Flexible pricing vs ₹15,000-₹50,000/month at agencies\n💰 SEO Services: Lower costs vs ₹15,000-₹50,000/month at agencies\n💰 Content Creation: Affordable rates vs ₹2,000-₹10,000/post at agencies\n\nSave 30-60% compared to traditional agencies without compromising quality!",
           options: ['Why choose Askit over agencies?', 'Get started with MSME services', 'Go back']
         }]);
         setConversationState('msme-pricing');
@@ -169,7 +169,7 @@ const ChatbotDialog = ({ isOpen, onClose }: ChatbotDialogProps) => {
     setTimeout(() => {
       let answer = '';
       if (question.toLowerCase().includes('who can use')) {
-        answer = "Anyone in college — whether you want to earn or get tasks done!";
+        answer = "Anyone in college whether you want to earn or get tasks done!";
       } else if (question.toLowerCase().includes('free')) {
         answer = "Yes! The MVP version is completely free. No hidden fees.";
       } else if (question.toLowerCase().includes('payment')) {
@@ -183,7 +183,7 @@ const ChatbotDialog = ({ isOpen, onClose }: ChatbotDialogProps) => {
       } else if (question.toLowerCase().includes('agencies')) {
         answer = "Askit offers similar quality at 30-60% lower costs, with faster turnaround, flexible scaling, transparent pricing, and fresh creativity from talented students!";
       } else if (question.toLowerCase().includes('pricing') || question.toLowerCase().includes('cost')) {
-        answer = "We use flexible, task-based pricing. You only pay for what you need — no retainers, no hidden fees. Typically 30-60% cheaper than agency rates!";
+        answer = "We use flexible, task-based pricing. You only pay for what you need no retainers, no hidden fees. Typically 30-60% cheaper than agency rates!";
       }
 
       if (answer) {

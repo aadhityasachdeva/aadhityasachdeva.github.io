@@ -96,7 +96,7 @@ const MSMEServices = () => {
             <span className="text-primary">Support for Your Business</span>
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto animate-fade-in">
-            Askit helps MSMEs access skilled students for design, marketing, research, and more — at a fraction of agency costs.
+            Askit helps MSMEs access skilled students for design, marketing, research, and more at a fraction of agency costs.
           </p>
           <Button 
             size="lg" 
@@ -220,7 +220,7 @@ const MSMEServices = () => {
                   Askit delivers similar value at up to 60% lower cost.
                 </p>
                 <p className="text-lg text-muted-foreground">
-                  By hiring freelancers through Askit, you only pay for what you want. You receive quality deliverables that match your expectations — no wasted budget on unnecessary services or long-term commitments.
+                  By hiring freelancers through Askit, you only pay for what you want. You receive quality deliverables that match your expectations no wasted budget on unnecessary services or long-term commitments.
                 </p>
                 <div className="pt-4 border-t border-border mt-6">
                   <p className="text-sm text-muted-foreground italic">
@@ -240,7 +240,7 @@ const MSMEServices = () => {
             Ready to Grow Without the <span className="text-primary">Agency Price Tag?</span>
           </h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Join Askit's MSME program and connect with talented students who can elevate your marketing, research, and design — affordably.
+            Join Askit's MSME program and connect with talented students who can elevate your marketing, research, and design affordably.
           </p>
           <Button 
             size="lg" 
@@ -250,7 +250,7 @@ const MSMEServices = () => {
             Get Started
           </Button>
           <p className="text-muted-foreground mt-12 text-lg italic">
-            At Askit, we believe every business deserves access to great talent — without breaking the bank.
+            At Askit, we believe every business deserves access to great talent without breaking the bank.
           </p>
         </div>
       </section>
