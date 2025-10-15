@@ -3,6 +3,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import PricingChart from '@/components/PricingChart';
 
 const MSMEServices = () => {
   const services = [
@@ -66,23 +67,6 @@ const MSMEServices = () => {
     }
   ];
 
-  const pricingData = [
-    {
-      service: "Social Media Management + Content",
-      agencyCost: "₹15,000 – ₹50,000",
-      askitCost: "Flexible per-task pricing, pay only for what you need"
-    },
-    {
-      service: "Basic SEO Package",
-      agencyCost: "₹15,000 – ₹50,000",
-      askitCost: "Lower cost with students handling keyword + on-page tasks"
-    },
-    {
-      service: "Content / Blogs / Copywriting",
-      agencyCost: "₹2,000 – ₹10,000 per post",
-      askitCost: "Affordable, fast turnaround"
-    }
-  ];
 
   return (
     <div className="min-h-screen bg-background text-foreground font-inter">
@@ -153,32 +137,7 @@ const MSMEServices = () => {
       {/* Section 2: Pricing Comparison */}
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            Industry vs. Askit <span className="text-primary">Pricing Comparison</span>
-          </h2>
-          <div className="overflow-x-auto">
-            <table className="w-full border-collapse">
-              <thead>
-                <tr className="border-b-2 border-primary">
-                  <th className="text-left p-4 font-semibold text-lg">Service</th>
-                  <th className="text-left p-4 font-semibold text-lg">Typical Agency Cost (Monthly)</th>
-                  <th className="text-left p-4 font-semibold text-lg">Askit Student Network Estimate</th>
-                </tr>
-              </thead>
-              <tbody>
-                {pricingData.map((row, index) => (
-                  <tr key={index} className="border-b border-border hover:bg-muted/30 transition-colors">
-                    <td className="p-4 font-medium">{row.service}</td>
-                    <td className="p-4">{row.agencyCost}</td>
-                    <td className="p-4 text-primary font-medium">{row.askitCost}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <p className="text-sm text-muted-foreground mt-6 text-center max-w-4xl mx-auto">
-            Agency pricing varies widely by scope and campaign. Askit connects MSMEs with student talent for 30–60% lower costs without compromising creativity or quality.
-          </p>
+          <PricingChart />
         </div>
       </section>
 
