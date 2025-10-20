@@ -4,6 +4,8 @@ import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import PricingChart from '@/components/PricingChart';
+import heroImage from '@/assets/msme-hero-collaboration.png';
+import bgPattern from '@/assets/msme-background-pattern.png';
 
 const MSMEServices = () => {
   const services = [
@@ -73,22 +75,74 @@ const MSMEServices = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4">
-        <div className="container mx-auto max-w-6xl text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in">
-            Smart, Affordable, and Scalable{' '}
-            <span className="text-primary">Support for Your Business</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto animate-fade-in">
-            Askit helps MSMEs access skilled students for design, marketing, research, and more at a fraction of agency costs.
-          </p>
-          <Button 
-            size="lg" 
-            className="animate-fade-in"
-            onClick={() => window.location.href = 'mailto:support@askitindia.com'}
-          >
-            Get Started with Askit for MSMEs
-          </Button>
+      <section className="relative pt-32 pb-24 px-4 overflow-hidden">
+        {/* Animated background pattern */}
+        <div 
+          className="absolute inset-0 opacity-20 bg-cover bg-center animate-pulse"
+          style={{ backgroundImage: `url(${bgPattern})` }}
+        />
+        
+        <div className="container mx-auto max-w-7xl relative z-10">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Left: Hero Text */}
+            <div className="text-left space-y-6 animate-fade-in-up">
+              <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+                Elevate Your Business with{' '}
+                <span className="bg-gradient-accent bg-clip-text text-transparent">
+                  India's Freshest Talent
+                </span>
+              </h1>
+              <p className="text-2xl md:text-3xl font-semibold text-foreground/90">
+                Affordable Design, Marketing & Research—
+                <span className="text-accent"> No Agency Price Tag.</span>
+              </p>
+              <p className="text-lg text-muted-foreground max-w-xl">
+                Connect with skilled students who bring modern creativity, fresh perspectives, and professional quality at up to 60% lower cost than traditional agencies.
+              </p>
+              <div className="flex flex-wrap gap-4 pt-4">
+                <Button 
+                  size="lg" 
+                  className="text-lg px-8 shadow-neon animate-glow-pulse bg-accent hover:bg-accent/90 text-accent-foreground font-bold"
+                  onClick={() => window.location.href = 'mailto:support@askitindia.com'}
+                >
+                  Get Started Today
+                </Button>
+                <Button 
+                  size="lg" 
+                  variant="outline"
+                  className="text-lg px-8 border-2"
+                  onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
+                >
+                  See Pricing
+                </Button>
+              </div>
+              {/* Key stats */}
+              <div className="flex flex-wrap gap-8 pt-8">
+                <div>
+                  <div className="text-4xl font-bold text-accent">60%</div>
+                  <div className="text-sm text-muted-foreground">Cost Savings</div>
+                </div>
+                <div>
+                  <div className="text-4xl font-bold text-accent">500+</div>
+                  <div className="text-sm text-muted-foreground">Skilled Students</div>
+                </div>
+                <div>
+                  <div className="text-4xl font-bold text-accent">24hrs</div>
+                  <div className="text-sm text-muted-foreground">Quick Turnaround</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right: Hero Image */}
+            <div className="relative animate-fade-in">
+              <div className="absolute -inset-4 bg-gradient-accent opacity-20 blur-3xl rounded-full" />
+              <img 
+                src={heroImage} 
+                alt="Young talented students collaborating on business projects"
+                className="relative rounded-2xl shadow-2xl w-full"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -112,14 +166,14 @@ const MSMEServices = () => {
             {services.map((service, index) => (
               <Card 
                 key={index} 
-                className="group hover:shadow-2xl hover:scale-105 transition-all duration-300 border-border/50 hover:border-primary/50 bg-card/80 backdrop-blur-sm animate-fade-in"
+                className="group hover:shadow-neon hover:scale-105 transition-all duration-300 border-border/50 hover:border-accent bg-card/80 backdrop-blur-sm animate-fade-in"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <CardHeader className="space-y-4">
-                  <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center group-hover:from-primary/30 group-hover:to-primary/10 transition-all duration-300 group-hover:scale-110">
-                    <service.icon className="w-8 h-8 text-primary group-hover:animate-pulse" />
+                  <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-accent/20 to-primary/10 flex items-center justify-center group-hover:from-accent/40 group-hover:to-accent/20 transition-all duration-300 group-hover:scale-110 shadow-neon">
+                    <service.icon className="w-8 h-8 text-accent group-hover:animate-pulse" />
                   </div>
-                  <CardTitle className="text-xl group-hover:text-primary transition-colors duration-300">
+                  <CardTitle className="text-xl group-hover:text-accent transition-colors duration-300">
                     {service.title}
                   </CardTitle>
                 </CardHeader>
@@ -135,7 +189,7 @@ const MSMEServices = () => {
       </section>
 
       {/* Section 2: Pricing Comparison */}
-      <section className="py-20 px-4">
+      <section id="pricing" className="py-20 px-4 scroll-mt-20">
         <div className="container mx-auto max-w-6xl">
           <PricingChart />
         </div>

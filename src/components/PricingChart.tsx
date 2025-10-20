@@ -1,4 +1,4 @@
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Cell, LabelList } from 'recharts';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const PricingChart = () => {
@@ -8,18 +8,21 @@ const PricingChart = () => {
       fullName: 'Social Media Management',
       'Agency Cost': 22500,
       'Askit Cost': 16000,
+      savings: '-29%'
     },
     {
       service: 'SEO Package',
       fullName: 'Basic SEO Package',
       'Agency Cost': 22500,
       'Askit Cost': 16000,
+      savings: '-29%'
     },
     {
       service: 'Content Writing',
       fullName: 'Content/Blogs/Copywriting',
       'Agency Cost': 6000,
       'Askit Cost': 3000,
+      savings: '-50%'
     },
   ];
 
@@ -120,11 +123,18 @@ const PricingChart = () => {
               />
               <Bar 
                 dataKey="Askit Cost" 
-                fill="hsl(var(--primary))" 
+                fill="hsl(var(--accent))" 
                 radius={[8, 8, 0, 0]}
                 name="Askit Cost"
                 maxBarSize={80}
-              />
+                style={{ filter: 'drop-shadow(0 0 10px hsl(var(--accent)))' }}
+              >
+                <LabelList 
+                  dataKey="savings" 
+                  position="top" 
+                  style={{ fill: 'hsl(var(--accent))', fontWeight: 'bold', fontSize: '14px' }} 
+                />
+              </Bar>
             </BarChart>
           </ResponsiveContainer>
         </div>

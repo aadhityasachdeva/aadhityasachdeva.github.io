@@ -67,14 +67,18 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				'electric-blue': 'hsl(var(--electric-blue))',
+				'neon-green': 'hsl(var(--neon-green))',
+				'neon-cyan': 'hsl(var(--neon-cyan))',
 				'dark-surface': 'hsl(var(--dark-surface))',
 			},
 			backgroundImage: {
 				'gradient-primary': 'var(--gradient-primary)',
+				'gradient-accent': 'var(--gradient-accent)',
 				'gradient-hero': 'var(--gradient-hero)',
 			},
 			boxShadow: {
 				'glow': 'var(--shadow-glow)',
+				'neon': 'var(--shadow-neon)',
 			},
 			transitionTimingFunction: {
 				'smooth': 'var(--transition-smooth)',
