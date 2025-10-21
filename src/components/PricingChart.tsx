@@ -6,14 +6,14 @@ const PricingChart = () => {
     {
       service: 'Social Media',
       fullName: 'Social Media Management',
-      'Agency Cost': 22500,
-      'Askit Cost': 16000,
+      'Agency Cost': 18000,
+      'Askit Cost': 12600,
     },
     {
-      service: 'SEO Package',
-      fullName: 'Basic SEO Package',
-      'Agency Cost': 22500,
-      'Askit Cost': 16000,
+      service: 'Digital Marketing',
+      fullName: 'Digital Marketing Package',
+      'Agency Cost': 18000,
+      'Askit Cost': 12600,
     },
     {
       service: 'Content Writing',
