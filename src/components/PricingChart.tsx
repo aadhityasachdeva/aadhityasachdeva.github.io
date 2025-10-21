@@ -4,10 +4,10 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 const PricingChart = () => {
   const chartData = [
     {
-      service: 'Social Media',
-      fullName: 'Social Media Management',
-      'Agency Cost': 18000,
-      'Askit Cost': 12600,
+      service: 'Creative and Design',
+      fullName: 'Creative and Design Services',
+      'Agency Cost': 16000,
+      'Askit Cost': 11200,
     },
     {
       service: 'Digital Marketing',
