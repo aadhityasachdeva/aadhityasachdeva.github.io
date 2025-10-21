@@ -25,6 +25,11 @@ const PricingChart = () => {
 
   const CustomTooltip = ({ active, payload }: any) => {
     if (active && payload && payload.length) {
+      const agencyCost = payload.find((p: any) => p.dataKey === 'Agency Cost')?.value || 0;
+      const askitCost = payload.find((p: any) => p.dataKey === 'Askit Cost')?.value || 0;
+      const savings = agencyCost - askitCost;
+      const savingsPercentage = agencyCost > 0 ? Math.round((savings / agencyCost) * 100) : 0;
+      
       return (
         <div className="bg-card border-2 border-primary/20 rounded-lg p-4 shadow-xl min-w-[200px]">
           <p className="font-bold mb-3 text-base leading-tight">{payload[0].payload.fullName}</p>
@@ -40,6 +45,16 @@ const PricingChart = () => {
                 </span>
               </div>
             ))}
+            {savings > 0 && (
+              <div className="pt-2 mt-2 border-t border-border">
+                <div className="flex justify-between items-center gap-4">
+                  <span className="text-sm font-medium">You Save:</span>
+                  <span className="text-sm font-bold text-primary">
+                    ₹{savings.toLocaleString('en-IN')} ({savingsPercentage}%)
+                  </span>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       );
