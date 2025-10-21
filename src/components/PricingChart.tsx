@@ -1,6 +1,5 @@
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Cell, LabelList } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Sparkles } from 'lucide-react';
 
 const PricingChart = () => {
   const chartData = [
@@ -9,37 +8,30 @@ const PricingChart = () => {
       fullName: 'Social Media Management',
       'Agency Cost': 22500,
       'Askit Cost': 16000,
-      savings: '29%',
-      savingsLabel: '-29%'
     },
     {
       service: 'SEO Package',
       fullName: 'Basic SEO Package',
       'Agency Cost': 22500,
       'Askit Cost': 16000,
-      savings: '29%',
-      savingsLabel: '-29%'
     },
     {
       service: 'Content Writing',
       fullName: 'Content/Blogs/Copywriting',
       'Agency Cost': 6000,
       'Askit Cost': 3000,
-      savings: '50%',
-      savingsLabel: '-50%'
     },
   ];
 
   const CustomTooltip = ({ active, payload }: any) => {
     if (active && payload && payload.length) {
-      const data = payload[0].payload;
       return (
-        <div className="bg-card border-2 border-accent/40 rounded-lg p-4 shadow-neon min-w-[220px] backdrop-blur-sm">
-          <p className="font-bold mb-3 text-base leading-tight text-foreground">{data.fullName}</p>
-          <div className="space-y-2">
+        <div className="bg-card border-2 border-primary/20 rounded-lg p-4 shadow-xl min-w-[200px]">
+          <p className="font-bold mb-3 text-base leading-tight">{payload[0].payload.fullName}</p>
+          <div className="space-y-1.5">
             {payload.map((entry: any, index: number) => (
               <div key={index} className="flex justify-between items-center gap-4">
-                <span className="text-sm font-medium text-muted-foreground">{entry.name}:</span>
+                <span className="text-sm font-medium">{entry.name}:</span>
                 <span 
                   style={{ color: entry.color }} 
                   className="text-sm font-bold whitespace-nowrap"
@@ -48,14 +40,6 @@ const PricingChart = () => {
                 </span>
               </div>
             ))}
-            <div className="pt-2 mt-2 border-t border-accent/20">
-              <div className="flex items-center justify-center gap-2">
-                <Sparkles className="w-4 h-4 text-accent" />
-                <span className="text-lg font-bold text-accent">
-                  Save {data.savings}
-                </span>
-              </div>
-            </div>
           </div>
         </div>
       );
@@ -64,21 +48,13 @@ const PricingChart = () => {
   };
 
   return (
-    <Card className="border-accent/30 bg-gradient-to-br from-background via-background to-accent/5 shadow-neon relative overflow-hidden">
-      {/* Decorative glow effects */}
-      <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl -z-10" />
-      <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl -z-10" />
-      
-      <CardHeader className="space-y-4 pb-6 relative">
-        <div className="flex items-center justify-center gap-3 mb-2">
-          <Sparkles className="w-8 h-8 text-accent animate-pulse" />
-          <CardTitle className="text-center text-3xl md:text-4xl leading-tight font-bold">
-            Industry vs. Askit <span className="bg-gradient-accent bg-clip-text text-transparent">Smart Savings</span>
-          </CardTitle>
-          <Sparkles className="w-8 h-8 text-accent animate-pulse" />
-        </div>
-        <p className="text-center text-muted-foreground text-base md:text-lg font-medium">
-          Monthly pricing comparison (in ₹) — See the dramatic difference
+    <Card className="border-primary/20 bg-gradient-to-br from-background to-muted/30 shadow-lg">
+      <CardHeader className="space-y-3 pb-6">
+        <CardTitle className="text-center text-2xl md:text-3xl leading-tight">
+          Industry vs. Askit <span className="text-primary">Pricing Comparison</span>
+        </CardTitle>
+        <p className="text-center text-muted-foreground text-sm md:text-base">
+          Monthly pricing comparison (in ₹)
         </p>
       </CardHeader>
       <CardContent className="px-4 md:px-6">
@@ -141,52 +117,27 @@ const PricingChart = () => {
                 radius={[8, 8, 0, 0]}
                 name="Agency Cost"
                 maxBarSize={80}
-                opacity={0.7}
               />
               <Bar 
                 dataKey="Askit Cost" 
+                fill="hsl(var(--primary))" 
                 radius={[8, 8, 0, 0]}
                 name="Askit Cost"
                 maxBarSize={80}
-              >
-                {chartData.map((entry, index) => (
-                  <Cell 
-                    key={`cell-${index}`}
-                    fill="hsl(var(--accent))"
-                    style={{ 
-                      filter: 'drop-shadow(0 0 20px hsl(var(--accent))) drop-shadow(0 4px 8px rgba(0,0,0,0.3))',
-                    }}
-                  />
-                ))}
-                <LabelList 
-                  dataKey="savingsLabel" 
-                  position="top" 
-                  offset={12}
-                  style={{ 
-                    fill: 'hsl(var(--accent))', 
-                    fontWeight: 'bold', 
-                    fontSize: '16px',
-                    textShadow: '0 0 10px hsl(var(--accent))',
-                  }} 
-                />
-              </Bar>
+              />
             </BarChart>
           </ResponsiveContainer>
         </div>
-        <div className="mt-10 text-center space-y-4 px-2">
-          <div className="bg-accent/10 border border-accent/30 rounded-xl p-6 backdrop-blur-sm">
-            <p className="text-base md:text-lg text-foreground leading-relaxed font-medium">
-              Agency pricing varies widely by scope and campaign. Askit connects MSMEs with student talent for <span className="text-accent font-bold text-xl">30–60% lower costs</span> without compromising creativity or quality.
-            </p>
-          </div>
-          <div className="space-y-1">
-            <p className="text-xs text-muted-foreground italic">
-              * Values shown are approximate monthly averages for comparison
-            </p>
-            <p className="text-xs text-muted-foreground italic">
-              * These prices are estimates taken from the internet for viewer's reference
-            </p>
-          </div>
+        <div className="mt-8 text-center space-y-3 px-2">
+          <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+            Agency pricing varies widely by scope and campaign. Askit connects MSMEs with student talent for <span className="text-primary font-semibold">30–60% lower costs</span> without compromising creativity or quality.
+          </p>
+          <p className="text-xs text-muted-foreground italic">
+            * Values shown are approximate monthly averages for comparison
+          </p>
+          <p className="text-xs text-muted-foreground italic">
+            * These prices are estimates taken from the internet for viewer's reference
+          </p>
         </div>
       </CardContent>
     </Card>
