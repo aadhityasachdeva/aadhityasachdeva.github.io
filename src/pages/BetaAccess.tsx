@@ -6,6 +6,16 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { useToast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
+import { z } from 'zod';
+
+const emailSchema = z.object({
+  email: z.string()
+    .trim()
+    .min(1, { message: 'Email is required' })
+    .email({ message: 'Invalid email address' })
+    .max(255, { message: 'Email must be less than 255 characters' })
+    .toLowerCase()
+});
 
 const BetaAccess = () => {
   const [email, setEmail] = useState('');
@@ -16,10 +26,13 @@ const BetaAccess = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!email) {
+    // Validate email with Zod
+    const validation = emailSchema.safeParse({ email });
+    
+    if (!validation.success) {
       toast({
-        title: "Error",
-        description: "Please enter your email address",
+        title: "Invalid Email",
+        description: validation.error.errors[0].message,
         variant: "destructive",
       });
       return;
@@ -28,25 +41,37 @@ const BetaAccess = () => {
     setIsLoading(true);
 
     try {
-      // Save email to Supabase
+      // Save validated email to Supabase
       const { error } = await supabase
         .from('beta_signups')
-        .insert([{ email }]);
+        .insert([{ email: validation.data.email }]);
 
       if (error) {
         // Check if it's a duplicate email error
-        if (error.code !== '23505') {
-          throw error;
+        if (error.code === '23505') {
+          toast({
+            title: "Already Registered",
+            description: "This email is already signed up for beta access.",
+            variant: "destructive",
+          });
+          return;
         }
+        throw error;
       }
 
       setEmail('');
       
-      // Redirect to the main platform immediately
-      window.open('https://askitindia.com/app', '_blank');
+      toast({
+        title: "Success!",
+        description: "You're in! Redirecting to the platform...",
+      });
+      
+      // Redirect to the main platform
+      setTimeout(() => {
+        window.open('https://askitindia.com/app', '_blank');
+      }, 1000);
 
     } catch (error) {
-      console.error('Error saving beta signup:', error);
       toast({
         title: "Error",
         description: "Failed to save your email. Please try again.",
