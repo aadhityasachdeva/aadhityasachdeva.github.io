@@ -92,10 +92,6 @@ const MSMEServices = () => {
                   India's Freshest Talent
                 </span>
               </h1>
-              <p className="text-2xl md:text-3xl font-semibold text-foreground/90">
-                Affordable Design, Marketing & Research—
-                <span className="text-accent"> No Agency Price Tag.</span>
-              </p>
               <p className="text-lg text-muted-foreground max-w-xl">
                 Connect with skilled students who bring modern creativity, fresh perspectives, and professional quality at up to 60% lower cost than traditional agencies.
               </p>
