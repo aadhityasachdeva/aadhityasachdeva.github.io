@@ -6,7 +6,7 @@ const BetaTesting = () => {
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-8">
             <h2 className="text-4xl md:text-5xl font-bold font-poppins mb-6">
-              Be Part of Our Beta Tribe <Rocket className="inline w-12 h-12 text-primary ml-2" />
+              Be Part of Our Community <Rocket className="inline w-12 h-12 text-primary ml-2" />
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               We're currently testing in <span className="text-primary font-semibold">Select Cities </span> 
