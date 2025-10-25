@@ -60,7 +60,7 @@ const Navigation = () => {
               to="/beta-access"
               className="text-foreground hover:text-primary transition-colors duration-300"
             >
-              Early Access
+              Get Access
             </Link>
             <button 
               onClick={() => scrollToSection('contact')}
