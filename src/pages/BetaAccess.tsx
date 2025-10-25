@@ -1,85 +1,11 @@
-import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
 import { Mail, Instagram, Linkedin, Rocket, CheckCircle, Target, Award, ArrowRight } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { useToast } from '@/hooks/use-toast';
-import { supabase } from '@/integrations/supabase/client';
-import { z } from 'zod';
-
-const emailSchema = z.object({
-  email: z.string()
-    .trim()
-    .min(1, { message: 'Email is required' })
-    .email({ message: 'Invalid email address' })
-    .max(255, { message: 'Email must be less than 255 characters' })
-    .toLowerCase()
-});
 
 const BetaAccess = () => {
-  const [email, setEmail] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
-  
-  const { toast } = useToast();
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    // Validate email with Zod
-    const validation = emailSchema.safeParse({ email });
-    
-    if (!validation.success) {
-      toast({
-        title: "Invalid Email",
-        description: validation.error.errors[0].message,
-        variant: "destructive",
-      });
-      return;
-    }
-
-    setIsLoading(true);
-
-    try {
-      // Save validated email to Supabase
-      const { error } = await supabase
-        .from('beta_signups')
-        .insert([{ email: validation.data.email }]);
-
-      if (error) {
-        // Check if it's a duplicate email error
-        if (error.code === '23505') {
-          toast({
-            title: "Already Registered",
-            description: "This email is already signed up for beta access.",
-            variant: "destructive",
-          });
-          return;
-        }
-        throw error;
-      }
-
-      setEmail('');
-      
-      toast({
-        title: "Success!",
-        description: "You're in! Redirecting to the platform...",
-      });
-      
-      // Redirect to the main platform
-      setTimeout(() => {
-        window.open('https://askitindia.com/app', '_blank');
-      }, 1000);
-
-    } catch (error) {
-      toast({
-        title: "Error",
-        description: "Failed to save your email. Please try again.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsLoading(false);
-    }
+  const handleJoinPlatform = () => {
+    window.open('https://askitindia.com/app', '_blank');
   };
 
   return (
@@ -119,38 +45,32 @@ const BetaAccess = () => {
                 </p>
               </div>
 
-              {/* Email Signup */}
+              {/* Join Platform */}
               <div className="bg-card border border-border rounded-2xl p-8 mb-16">
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold font-poppins mb-4">
-                    Get Access Now
+                    Ready to Get Started?
                   </h3>
-                  <p className="text-muted-foreground">
-                    Enter your email below and we'll redirect you to the platform
+                  <p className="text-muted-foreground mb-6">
+                    Join the platform now and start your journey with Askit
                   </p>
-                </div>
-
-                <form onSubmit={handleSubmit} className="max-w-md mx-auto">
-                  <div className="flex gap-4">
-                    <Input
-                      type="email"
-                      placeholder="Enter your email address"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      required
-                      className="flex-1"
-                    />
-                    <Button type="submit" disabled={isLoading} className="bg-primary hover:bg-primary/80">
-                      {isLoading ? 'Saving...' : 'Get Beta Access'}
-                    </Button>
-                  </div>
-                  <p className="text-xs text-muted-foreground mt-4 text-center">
+                  
+                  <Button 
+                    onClick={handleJoinPlatform}
+                    size="lg" 
+                    className="bg-primary hover:bg-primary/80 text-primary-foreground font-semibold px-8 py-4 text-lg group"
+                  >
+                    Join the Platform
+                    <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                  
+                  <p className="text-xs text-muted-foreground mt-4">
                     By joining the platform, you agree with our{" "}
                     <a href="/terms-of-use" className="text-primary hover:underline">Terms of Use</a>
                     {" "}and{" "}
                     <a href="/privacy-policy" className="text-primary hover:underline">Privacy Policy</a>
                   </p>
-                </form>
+                </div>
               </div>
 
               {/* Benefits */}
