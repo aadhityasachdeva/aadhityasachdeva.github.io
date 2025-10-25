@@ -58,7 +58,7 @@ const BetaAccess = () => {
                   <Button 
                     onClick={handleJoinPlatform}
                     size="lg" 
-                    className="bg-primary hover:bg-primary/80 text-primary-foreground font-semibold px-8 py-4 text-lg group"
+                    className="bg-primary hover:bg-primary/80 text-primary-foreground font-semibold px-8 py-4 text-lg group animate-glow-pulse"
                   >
                     Join the Platform
                     <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
