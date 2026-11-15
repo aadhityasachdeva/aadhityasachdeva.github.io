@@ -1,0 +1,4 @@
+- [x] Display the attached privacy policy and terms on the existing legal pages and preserve footer/access links.
+- [x] Correct privacy disclosures for the enabled visitor analytics and external fonts.
+- [x] Remove the home page's opening reveal effects so its content is visible immediately.
+- [ ] Verify legal links, page readability and immediate home-page visibility on desktop and mobile.
