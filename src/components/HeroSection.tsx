@@ -10,12 +10,12 @@ const HeroSection = () => {
         <div className="max-w-7xl mx-auto">
           {/* Main Tagline */}
           <div className="text-center mb-16">
-            <h1 className="text-3xl md:text-5xl font-bold font-poppins mb-8 animate-fade-in-up hover:scale-105 transition-transform duration-300">
+            <h1 className="text-3xl md:text-5xl font-bold font-poppins mb-8 hover:scale-105 transition-transform duration-300">
               <span className="text-foreground">The Smarter Way To Get Things Done.</span>
               <br />
               <span className="text-blue-500 font-bold">Just Askit.</span>
             </h1>
-            <div className="animate-fade-in-up">
+            <div>
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300" onClick={() => window.location.href = '/beta-access'}>
                 Join Now
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -25,7 +25,7 @@ const HeroSection = () => {
 
           {/* Two-column layout */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="text-left lg:pr-8 animate-fade-in-up">
+            <div className="text-left lg:pr-8">
               <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
                 India's premier student freelance platform connecting college students for part-time work and freelancing opportunities. 
                 <span className="text-primary font-semibold"> Post tasks, hire student freelancers, or earn money using your skills.</span>
@@ -34,7 +34,7 @@ const HeroSection = () => {
 
             {/* Right side - App Screen Preview */}
             <div className="flex justify-center lg:justify-end">
-              <div className="max-w-lg mx-auto lg:mx-0 transform hover:scale-105 transition-transform duration-500 animate-fade-in-up">
+              <div className="max-w-lg mx-auto lg:mx-0 transform hover:scale-105 transition-transform duration-500">
                 <img src="/lovable-uploads/fee3ac75-bef9-4fc6-98a9-39bfc5921164.png" alt="Askit India student freelance platform mobile app showing task posting and service marketplace interface for college students to earn money" className="w-full h-auto rounded-2xl shadow-lg" />
               </div>
             </div>
